@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- Theme Initializer (Default Mutlak: Mode Terang / Light Mode First-Load) -->
+    <script>(function(){const savedTheme=localStorage.getItem('supertools_theme');if(savedTheme==='dark'){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}})();</script>
+    
+    <title>SuperTools — Solusi Cerdas Utilitas Modern Web</title>
+    <meta name="description" content="SuperTools - Koleksi utilitas modern, cepat, privat, dan 100% client-side tanpa server. Kalkulator, ekstraksi audio WAV, konverter gambar HEIC, pemformat JSON/HTML, generator QR, dan aneka alat produktivitas harian.">
+    
+    <!-- Favicon Inline SVG -->
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%233e90ff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><polygon points=%2213 2 3 14 12 14 11 22 21 10 12 10 13 2%22 fill=%22%233e90ff%22/></svg>" type="image/svg+xml">
+    
+    <!-- Google Fonts Inter & Material Symbols (Asynchronous Non-Blocking Preload with display=swap) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x:;--tw-pan-y:;--tw-pinch-zoom:;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position:;--tw-gradient-via-position:;--tw-gradient-to-position:;--tw-ordinal:;--tw-slashed-zero:;--tw-numeric-figure:;--tw-numeric-spacing:;--tw-numeric-fraction:;--tw-ring-inset:;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur:;--tw-brightness:;--tw-contrast:;--tw-grayscale:;--tw-hue-rotate:;--tw-invert:;--tw-saturate:;--tw-sepia:;--tw-drop-shadow:;--tw-backdrop-blur:;--tw-backdrop-brightness:;--tw-backdrop-contrast:;--tw-backdrop-grayscale:;--tw-backdrop-hue-rotate:;--tw-backdrop-invert:;--tw-backdrop-opacity:;--tw-backdrop-saturate:;--tw-backdrop-sepia:;--tw-contain-size:;--tw-contain-layout:;--tw-contain-paint:;--tw-contain-style:}::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x:;--tw-pan-y:;--tw-pinch-zoom:;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position:;--tw-gradient-via-position:;--tw-gradient-to-position:;--tw-ordinal:;--tw-slashed-zero:;--tw-numeric-figure:;--tw-numeric-spacing:;--tw-numeric-fraction:;--tw-ring-inset:;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur:;--tw-brightness:;--tw-contrast:;--tw-grayscale:;--tw-hue-rotate:;--tw-invert:;--tw-saturate:;--tw-sepia:;--tw-drop-shadow:;--tw-backdrop-blur:;--tw-backdrop-brightness:;--tw-backdrop-contrast:;--tw-backdrop-grayscale:;--tw-backdrop-hue-rotate:;--tw-backdrop-invert:;--tw-backdrop-opacity:;--tw-backdrop-saturate:;--tw-backdrop-sepia:;--tw-contain-size:;--tw-contain-layout:;--tw-contain-paint:;--tw-contain-style:}*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.-bottom-20{bottom:-5rem}.-right-20{right:-5rem}.bottom-6{bottom:1.5rem}.left-1\/2{left:50%}.left-3{left:.75rem}.right-1{right:.25rem}.right-2\.5{right:.625rem}.right-6{right:1.5rem}.top-1{top:.25rem}.top-2\.5{top:.625rem}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.col-span-2{grid-column:span 2/span 2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-auto{margin-left:auto}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-12{margin-top:3rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.block{display:block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-\[3\/4\]{aspect-ratio:3/4}.h-1{height:.25rem}.h-1\.5{height:.375rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-24{height:6rem}.h-32{height:8rem}.h-4{height:1rem}.h-40{height:10rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-96{height:24rem}.h-\[100dvh\]{height:100dvh}.h-\[460px\]{height:460px}.h-\[480px\]{height:480px}.h-\[560px\]{height:560px}.h-full{height:100%}.h-screen{height:100vh}.max-h-48{max-height:12rem}.max-h-60{max-height:15rem}.max-h-64{max-height:16rem}.max-h-72{max-height:18rem}.max-h-\[460px\]{max-height:460px}.max-h-\[85vh\]{max-height:85vh}.min-h-\[170px\]{min-height:170px}.min-h-\[220px\]{min-height:220px}.min-h-\[300px\]{min-height:300px}.w-1{width:.25rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-24{width:6rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-96{width:24rem}.w-full{width:100%}.min-w-0{min-width:0}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-\[200px\]{max-width:200px}.max-w-full{max-width:100%}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.shrink{flex-shrink:1}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.scale-75{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-75{--tw-scale-x:.75;--tw-scale-y:.75}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-crosshair{cursor:crosshair}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize-none{resize:none}.resize{resize:both}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.grid-cols-\[1fr\2c auto\2c 1fr\]{grid-template-columns:1fr auto 1fr}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-3\.5{gap:.875rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-y-0\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.125rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.125rem*var(--tw-space-y-reverse))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.rounded-t-\[32px\]{border-top-left-radius:32px;border-top-right-radius:32px}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l{border-left-width:1px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-emerald-500\/20{border-color:rgba(16,185,129,.2)}.border-outline{border-color:var(--color-outline,#8b91a0)}.border-primary{border-color:var(--color-primary,#aac7ff)}.border-red-500\/20{border-color:rgba(239,68,68,.2)}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.bg-black\/60{background-color:rgba(0,0,0,.6)}.bg-black\/70{background-color:rgba(0,0,0,.7)}.bg-blue-400\/10{background-color:rgba(96,165,250,.1)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-emerald-500\/10{background-color:rgba(16,185,129,.1)}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39/var(--tw-bg-opacity,1))}.bg-neutral-300{--tw-bg-opacity:1;background-color:rgb(212 212 212/var(--tw-bg-opacity,1))}.bg-neutral-900{--tw-bg-opacity:1;background-color:rgb(23 23 23/var(--tw-bg-opacity,1))}.bg-outline{background-color:var(--color-outline,#8b91a0)}.bg-primary{background-color:var(--color-primary,#aac7ff)}.bg-purple-500\/10{background-color:rgba(168,85,247,.1)}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68/var(--tw-bg-opacity,1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.bg-surface{background-color:var(--color-surface,#121317)}.bg-surface-container{background-color:var(--color-surface-card,#1e1f23)}.bg-surface-container-high{background-color:var(--color-surface-high,#292a2e)}.bg-surface-container-highest{background-color:var(--color-surface-highest,#343539)}.bg-surface-container-low{background-color:var(--color-surface-low,#1a1b1f)}.bg-surface-container-lowest{background-color:var(--color-surface-lowest,#0d0e12)}.bg-transparent{background-color:transparent}.bg-violet-500\/15{background-color:rgba(139,92,246,.15)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/15{background-color:hsla(0,0%,100%,.15)}.bg-white\/20{background-color:hsla(0,0%,100%,.2)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right,var(--tw-gradient-stops))}.from-\[\#00b4db\]{--tw-gradient-from:#00b4db var(--tw-gradient-from-position);--tw-gradient-to:rgba(0,180,219,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#00c6ff\]{--tw-gradient-from:#00c6ff var(--tw-gradient-from-position);--tw-gradient-to:rgba(0,198,255,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#0575e6\]{--tw-gradient-from:#0575e6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(5,117,230,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#11998e\]{--tw-gradient-from:#11998e var(--tw-gradient-from-position);--tw-gradient-to:rgba(17,153,142,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#1e3a8a\]{--tw-gradient-from:#1e3a8a var(--tw-gradient-from-position);--tw-gradient-to:rgba(30,58,138,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#232526\]{--tw-gradient-from:#232526 var(--tw-gradient-from-position);--tw-gradient-to:rgba(35,37,38,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#3a7bd5\]{--tw-gradient-from:#3a7bd5 var(--tw-gradient-from-position);--tw-gradient-to:rgba(58,123,213,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#4776e6\]{--tw-gradient-from:#4776e6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(71,118,230,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#4b6cb7\]{--tw-gradient-from:#4b6cb7 var(--tw-gradient-from-position);--tw-gradient-to:rgba(75,108,183,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#5d9cec\]{--tw-gradient-from:#5d9cec var(--tw-gradient-from-position);--tw-gradient-to:rgba(93,156,236,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#6a11cb\]{--tw-gradient-from:#6a11cb var(--tw-gradient-from-position);--tw-gradient-to:rgba(106,17,203,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#7e57c2\]{--tw-gradient-from:#7e57c2 var(--tw-gradient-from-position);--tw-gradient-to:rgba(126,87,194,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#e67e22\]{--tw-gradient-from:#e67e22 var(--tw-gradient-from-position);--tw-gradient-to:rgba(230,126,34,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#eb5757\]{--tw-gradient-from:#eb5757 var(--tw-gradient-from-position);--tw-gradient-to:rgba(235,87,87,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#ec008c\]{--tw-gradient-from:#ec008c var(--tw-gradient-from-position);--tw-gradient-to:rgba(236,0,140,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#f12711\]{--tw-gradient-from:#f12711 var(--tw-gradient-from-position);--tw-gradient-to:rgba(241,39,17,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#f857a6\]{--tw-gradient-from:#f857a6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(248,87,166,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#ff416c\]{--tw-gradient-from:#ff416c var(--tw-gradient-from-position);--tw-gradient-to:rgba(255,65,108,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-amber-500{--tw-gradient-from:#f59e0b var(--tw-gradient-from-position);--tw-gradient-to:rgba(245,158,11,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-amber-600{--tw-gradient-from:#d97706 var(--tw-gradient-from-position);--tw-gradient-to:rgba(217,119,6,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(59,130,246,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgba(37,99,235,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-cyan-500{--tw-gradient-from:#06b6d4 var(--tw-gradient-from-position);--tw-gradient-to:rgba(6,182,212,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-emerald-500{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgba(16,185,129,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-emerald-600{--tw-gradient-from:#059669 var(--tw-gradient-from-position);--tw-gradient-to:rgba(5,150,105,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-indigo-500{--tw-gradient-from:#6366f1 var(--tw-gradient-from-position);--tw-gradient-to:rgba(99,102,241,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-indigo-600{--tw-gradient-from:#4f46e5 var(--tw-gradient-from-position);--tw-gradient-to:rgba(79,70,229,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-neutral-700{--tw-gradient-from:#404040 var(--tw-gradient-from-position);--tw-gradient-to:rgba(64,64,64,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-pink-500{--tw-gradient-from:#ec4899 var(--tw-gradient-from-position);--tw-gradient-to:rgba(236,72,153,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-purple-500{--tw-gradient-from:#a855f7 var(--tw-gradient-from-position);--tw-gradient-to:rgba(168,85,247,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-red-500{--tw-gradient-from:#ef4444 var(--tw-gradient-from-position);--tw-gradient-to:rgba(239,68,68,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-rose-500{--tw-gradient-from:#f43f5e var(--tw-gradient-from-position);--tw-gradient-to:rgba(244,63,94,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-sky-500{--tw-gradient-from:#0ea5e9 var(--tw-gradient-from-position);--tw-gradient-to:rgba(14,165,233,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-teal-500{--tw-gradient-from:#14b8a6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(20,184,166,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-violet-600{--tw-gradient-from:#7c3aed var(--tw-gradient-from-position);--tw-gradient-to:rgba(124,58,237,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-\[\#312e81\]{--tw-gradient-to:rgba(49,46,129,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#312e81 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-indigo-600{--tw-gradient-to:rgba(79,70,229,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#4f46e5 var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-\[\#0072ff\]{--tw-gradient-to:#0072ff var(--tw-gradient-to-position)}.to-\[\#0083b0\]{--tw-gradient-to:#0083b0 var(--tw-gradient-to-position)}.to-\[\#021b79\]{--tw-gradient-to:#021b79 var(--tw-gradient-to-position)}.to-\[\#182848\]{--tw-gradient-to:#182848 var(--tw-gradient-to-position)}.to-\[\#1e1b4b\]{--tw-gradient-to:#1e1b4b var(--tw-gradient-to-position)}.to-\[\#2575fc\]{--tw-gradient-to:#2575fc var(--tw-gradient-to-position)}.to-\[\#38ef7d\]{--tw-gradient-to:#38ef7d var(--tw-gradient-to-position)}.to-\[\#3a6073\]{--tw-gradient-to:#3a6073 var(--tw-gradient-to-position)}.to-\[\#414345\]{--tw-gradient-to:#414345 var(--tw-gradient-to-position)}.to-\[\#4a89dc\]{--tw-gradient-to:#4a89dc var(--tw-gradient-to-position)}.to-\[\#5e35b1\]{--tw-gradient-to:#5e35b1 var(--tw-gradient-to-position)}.to-\[\#8e54e9\]{--tw-gradient-to:#8e54e9 var(--tw-gradient-to-position)}.to-\[\#d35400\]{--tw-gradient-to:#d35400 var(--tw-gradient-to-position)}.to-\[\#d63031\]{--tw-gradient-to:#d63031 var(--tw-gradient-to-position)}.to-\[\#f5af19\]{--tw-gradient-to:#f5af19 var(--tw-gradient-to-position)}.to-\[\#fc6767\]{--tw-gradient-to:#fc6767 var(--tw-gradient-to-position)}.to-\[\#ff4b2b\]{--tw-gradient-to:#ff4b2b var(--tw-gradient-to-position)}.to-\[\#ff5858\]{--tw-gradient-to:#ff5858 var(--tw-gradient-to-position)}.to-blue-600{--tw-gradient-to:#2563eb var(--tw-gradient-to-position)}.to-emerald-600{--tw-gradient-to:#059669 var(--tw-gradient-to-position)}.to-indigo-600{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.to-indigo-700{--tw-gradient-to:#4338ca var(--tw-gradient-to-position)}.to-neutral-900{--tw-gradient-to:#171717 var(--tw-gradient-to-position)}.to-orange-600{--tw-gradient-to:#ea580c var(--tw-gradient-to-position)}.to-purple-700{--tw-gradient-to:#7e22ce var(--tw-gradient-to-position)}.to-red-600{--tw-gradient-to:#dc2626 var(--tw-gradient-to-position)}.to-rose-600{--tw-gradient-to:#e11d48 var(--tw-gradient-to-position)}.to-teal-600{--tw-gradient-to:#0d9488 var(--tw-gradient-to-position)}.to-teal-700{--tw-gradient-to:#0f766e var(--tw-gradient-to-position)}.to-violet-500{--tw-gradient-to:#8b5cf6 var(--tw-gradient-to-position)}.to-violet-700{--tw-gradient-to:#6d28d9 var(--tw-gradient-to-position)}.to-yellow-600{--tw-gradient-to:#ca8a04 var(--tw-gradient-to-position)}.bg-no-repeat{background-repeat:no-repeat}.fill-white{fill:#fff}.object-contain{-o-object-fit:contain;object-fit:contain}.object-cover{-o-object-fit:cover;object-fit:cover}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-3\.5{padding:.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-1\.5{padding-bottom:.375rem}.pb-2{padding-bottom:.5rem}.pb-3{padding-bottom:.75rem}.pb-32{padding-bottom:8rem}.pb-8{padding-bottom:2rem}.pl-1{padding-left:.25rem}.pl-9{padding-left:2.25rem}.pr-8{padding-right:2rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:JetBrains Mono,monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[15px\]{font-size:15px}.text-\[16px\]{font-size:16px}.text-\[17px\]{font-size:17px}.text-\[18px\]{font-size:18px}.text-\[20px\]{font-size:20px}.text-\[22px\]{font-size:22px}.text-\[24px\]{font-size:24px}.text-\[28px\]{font-size:28px}.text-\[32px\]{font-size:32px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.lowercase{text-transform:lowercase}.tabular-nums{--tw-numeric-spacing:tabular-nums;font-variant-numeric:var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-normal{letter-spacing:0}.tracking-tight{letter-spacing:-.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11/var(--tw-text-opacity,1))}.text-blue-100\/90{color:rgba(219,234,254,.9)}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254/var(--tw-text-opacity,1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250/var(--tw-text-opacity,1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246/var(--tw-text-opacity,1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity,1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248/var(--tw-text-opacity,1))}.text-neutral-400{--tw-text-opacity:1;color:rgb(163 163 163/var(--tw-text-opacity,1))}.text-neutral-600{--tw-text-opacity:1;color:rgb(82 82 82/var(--tw-text-opacity,1))}.text-on-primary{color:var(--color-on-primary,#003064)}.text-on-surface{color:var(--color-text-main,#e3e2e7)}.text-on-surface-variant{color:var(--color-text-muted,#c0c6d6)}.text-outline{color:var(--color-outline,#8b91a0)}.text-pink-400{--tw-text-opacity:1;color:rgb(244 114 182/var(--tw-text-opacity,1))}.text-primary{color:var(--color-primary,#aac7ff)}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252/var(--tw-text-opacity,1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113/var(--tw-text-opacity,1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133/var(--tw-text-opacity,1))}.text-sky-400{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}.text-teal-400{--tw-text-opacity:1;color:rgb(45 212 191/var(--tw-text-opacity,1))}.text-violet-400{--tw-text-opacity:1;color:rgb(167 139 250/var(--tw-text-opacity,1))}.text-violet-700{--tw-text-opacity:1;color:rgb(109 40 217/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/60{color:hsla(0,0%,100%,.6)}.text-white\/80{color:hsla(0,0%,100%,.8)}.underline{text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.accent-primary{accent-color:var(--color-primary,#aac7ff)}.opacity-0{opacity:0}.opacity-50{opacity:.5}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgba(0,0,0,.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color)}.shadow-inner,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-blue-500\/20{--tw-shadow-color:rgba(59,130,246,.2);--tw-shadow:var(--tw-shadow-colored)}.outline{outline-style:solid}.blur{--tw-blur:blur(8px)}.blur,.blur-3xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-3xl{--tw-blur:blur(64px)}.drop-shadow-sm{--tw-drop-shadow:drop-shadow(0 1px 1px rgba(0,0,0,.05))}.drop-shadow-sm,.grayscale{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.grayscale{--tw-grayscale:grayscale(100%)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-150,.transition-transform{transition-duration:.15s}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.placeholder\:text-outline::-moz-placeholder{color:var(--color-outline,#8b91a0)}.placeholder\:text-outline::placeholder{color:var(--color-outline,#8b91a0)}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity,1))}.hover\:bg-emerald-600:hover{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.hover\:bg-primary-container:hover{background-color:var(--color-primary-container,#3e90ff)}.hover\:bg-red-500\/10:hover{background-color:rgba(239,68,68,.1)}.hover\:bg-red-600:hover{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28/var(--tw-bg-opacity,1))}.hover\:bg-surface-bright:hover{background-color:var(--color-surface-bright,#38393d)}.hover\:bg-surface-container-high:hover{background-color:var(--color-surface-high,#292a2e)}.hover\:bg-white\/25:hover{background-color:hsla(0,0%,100%,.25)}.hover\:text-error:hover{--tw-text-opacity:1;color:rgb(255 180 171/var(--tw-text-opacity,1))}.hover\:text-on-surface:hover{color:var(--color-text-main,#e3e2e7)}.hover\:text-primary:hover{color:var(--color-primary,#aac7ff)}.hover\:underline:hover{text-decoration-line:underline}.hover\:shadow-2xl:hover{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.focus\:border-primary-container:focus{border-color:var(--color-primary-container,#3e90ff)}.focus\:bg-surface-container-highest:focus{background-color:var(--color-surface-highest,#343539)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-1:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px+var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-primary:focus{--tw-ring-color:var(--color-primary,#aac7ff)}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95}.active\:scale-95:active,.group:hover .group-hover\:rotate-6{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:rotate-6{--tw-rotate:6deg}.group\/rail:hover .group-hover\/rail\:scale-100{--tw-scale-x:1;--tw-scale-y:1}.group\/rail:hover .group-hover\/rail\:scale-100,.group\/rail:hover .group-hover\/rail\:scale-75{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group\/rail:hover .group-hover\/rail\:scale-75{--tw-scale-x:.75;--tw-scale-y:.75}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-primary{color:var(--color-primary,#aac7ff)}.group\/rail:hover .group-hover\/rail\:opacity-0{opacity:0}.group\/rail:hover .group-hover\/rail\:opacity-100{opacity:1}.dark\:bg-neutral-100:is(.dark *){--tw-bg-opacity:1;background-color:rgb(245 245 245/var(--tw-bg-opacity,1))}.dark\:bg-neutral-600:is(.dark *){--tw-bg-opacity:1;background-color:rgb(82 82 82/var(--tw-bg-opacity,1))}.dark\:text-neutral-400:is(.dark *){--tw-text-opacity:1;color:rgb(163 163 163/var(--tw-text-opacity,1))}.dark\:text-neutral-900:is(.dark *){--tw-text-opacity:1;color:rgb(23 23 23/var(--tw-text-opacity,1))}.dark\:text-violet-300:is(.dark *){--tw-text-opacity:1;color:rgb(196 181 253/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:flex{display:flex}.sm\:max-w-none{max-width:none}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:p-10{padding:2.5rem}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:w-72{width:18rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:px-8{padding-left:2rem;padding-right:2rem}.md\:py-8{padding-top:2rem;padding-bottom:2rem}}@media (min-width:1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:1280px){.xl\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}}:root{--color-surface:#f8f9fa;--color-surface-dim:#f1f3f5;--color-surface-bright:#ffffff;--color-surface-lowest:#f3f4f6;--color-surface-low:#ffffff;--color-surface-card:#ffffff;--color-surface-high:#f3f4f6;--color-surface-highest:#e5e7eb;--color-text-main:#111827;--color-text-muted:#4b5563;--color-outline:#9ca3af;--color-outline-variant:#e5e7eb;--color-primary:#4f46e5;--color-on-primary:#ffffff;--color-primary-container:#4338ca;--color-on-primary-container:#ffffff;--color-border:#e5e7eb}html.dark{--color-surface:#121317;--color-surface-dim:#121317;--color-surface-bright:#38393d;--color-surface-lowest:#0d0e12;--color-surface-low:#1a1b1f;--color-surface-card:#1e1f23;--color-surface-high:#292a2e;--color-surface-highest:#343539;--color-text-main:#e3e2e7;--color-text-muted:#c0c6d6;--color-outline:#8b91a0;--color-outline-variant:#414754;--color-primary:#aac7ff;--color-on-primary:#003064;--color-primary-container:#3e90ff;--color-on-primary-container:#002957;--color-border:rgba(255,255,255,0.08)}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}html:not(.dark) .border-outline\/10{border-color:#e5e7eb !important}html:not(.dark) .border-outline\/20{border-color:#d1d5db !important}html:not(.dark) .bg-surface-container{box-shadow:0 4px 16px rgba(0,0,0,0.04),0 1px 3px rgba(0,0,0,0.05)}html:not(.dark) .bg-surface-container-low{background-color:#ffffff !important}html.dark *,html.dark::before,html.dark::after{border-color:rgba(255,255,255,0.08)}html.dark .border-outline\/10{border-color:rgba(255,255,255,0.07) !important}html.dark .border-outline\/20{border-color:rgba(255,255,255,0.12) !important}html.dark .border-outline{border-color:rgba(255,255,255,0.14) !important}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(150,150,150,0.25);border-radius:9999px}::-webkit-scrollbar-thumb:hover{background:rgba(150,150,150,0.45)}.no-scrollbar::-webkit-scrollbar{display:none !important;width:0 !important;height:0 !important}.no-scrollbar{-ms-overflow-style:none !important;scrollbar-width:none !important}.calc-btn{height:3.5rem;border-radius:0.75rem;font-weight:600;font-size:1.125rem;display:flex;align-items:center;justify-content:center;transition:all 0.15s ease;user-select:none}.calc-btn:active{transform:scale(0.95)}.calc-btn.num{background-color:rgba(255,255,255,0.06);color:#e3e2e7;border:1px solid rgba(255,255,255,0.05)}html:not(.dark) .calc-btn.num{background-color:#f9fafb;color:#1f2937;border:1px solid #e5e7eb}html:not(.dark) .calc-btn.num:hover{background-color:#f3f4f6}.calc-btn.op{background-color:rgba(62,144,255,0.15);color:#3e90ff}html:not(.dark) .calc-btn.op{background-color:#eef2ff;color:#4f46e5}.calc-btn.eq{background-color:#3e90ff;color:#ffffff;box-shadow:0 4px 12px rgba(62,144,255,0.3)}html:not(.dark) .calc-btn.eq{background-color:#4f46e5;color:#ffffff;box-shadow:0 4px 12px rgba(79,70,229,0.3)}.calc-btn.cl{background-color:rgba(239,68,68,0.15);color:#ef4444}html:not(.dark) .calc-btn.cl{background-color:#fef2f2;color:#ef4444}.diff-added{background-color:rgba(34,197,94,0.15);border-left:3px solid #22c55e;color:#16a34a}html.dark .diff-added{color:#4ade80}.diff-removed{background-color:rgba(239,68,68,0.15);border-left:3px solid #ef4444;color:#dc2626}html.dark .diff-removed{color:#f87171}.diff-line{font-family:'JetBrains Mono',monospace;padding:3px 8px;white-space:pre-wrap;word-break:break-all;font-size:12px;min-height:22px}.correct{color:#16a34a}.incorrect{color:#dc2626;text-decoration:underline}.loader{border:2px solid rgba(255,255,255,0.2);border-radius:50%;border-top:2px solid currentColor;width:16px;height:16px;animation:spin 0.8s linear infinite}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.tool-section.hidden{display:none !important}.mobile-sheet-panel{transition:transform 0.3s cubic-bezier(0.16,1,0.3,1) !important;will-change:transform}.mobile-sheet-open{transform:translateY(0%) !important}.mobile-sheet-closed{transform:translateY(100%) !important}#desktop-sidebar{transition:width 0.25s cubic-bezier(0.16,1,0.3,1) !important;will-change:width}#desktop-sidebar.sidebar-collapsed{width:52px !important}#desktop-sidebar.sidebar-collapsed #sidebar-header-expanded{display:none !important}#desktop-sidebar.sidebar-collapsed #sidebar-header-collapsed{display:flex !important}#desktop-sidebar.sidebar-collapsed #search-container-full{display:none !important}#desktop-sidebar.sidebar-collapsed #search-container-rail{display:flex !important}#desktop-sidebar .sidebar-header-container{padding:10px 10px 8px 10px !important}#desktop-sidebar.sidebar-collapsed .sidebar-header-container{padding:10px 4px !important}#desktop-sidebar .sidebar-footer-container{padding:8px 10px !important;border-top:1px solid rgba(255,255,255,0.06)}html:not(.dark) #desktop-sidebar .sidebar-footer-container{border-top:1px solid rgba(0,0,0,0.06)}#desktop-sidebar.sidebar-collapsed .sidebar-footer-container{padding:8px 4px !important}#desktop-sidebar.sidebar-collapsed #sidebar-footer-expanded{display:none !important}#desktop-sidebar.sidebar-collapsed #sidebar-rail-footer{display:flex !important}#desktop-sidebar .brand-zap-box,#sidebar-rail-toggle-btn,#sidebar-rail-toggle-btn>div{border-radius:8px !important}#desktop-sidebar .sidebar-category{padding-top:4px;border-top:1px solid rgba(255,255,255,0.06);margin-top:4px}html:not(.dark) #desktop-sidebar .sidebar-category{border-top:1px solid rgba(0,0,0,0.06)}#desktop-sidebar .sidebar-nav-container{padding:8px 8px !important}#desktop-sidebar.sidebar-collapsed .sidebar-nav-container{padding:8px 4px !important}#desktop-sidebar .tool-btn{height:34px !important;border-radius:10px !important}#desktop-sidebar.sidebar-collapsed .tool-btn{justify-content:center !important;padding-left:0 !important;padding-right:0 !important;width:34px !important;height:34px !important;margin-left:auto !important;margin-right:auto !important;border-radius:10px !important}#desktop-sidebar.sidebar-collapsed .tool-btn>span:not(.material-symbols-outlined){display:none !important}#desktop-sidebar .tool-btn .material-symbols-outlined{font-size:18px !important}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;width:1em;height:1em;overflow:hidden;text-align:center;vertical-align:-0.15em;user-select:none}#tool-youtube-noads{width:100%;max-width:1200px;margin:0 auto}#tool-youtube-noads.hidden{display:none !important}#tool-youtube-noads .app-container{width:100%;max-width:1200px;height:82vh;min-height:580px;display:flex;flex-direction:column;box-shadow:0 4px 12px rgba(0,0,0,0.08);border-radius:12px;overflow:hidden;background-color:#ffffff;border:1px solid #e0e0e0;box-sizing:border-box}html.dark #tool-youtube-noads .app-container{background-color:#1e1f23;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 20px rgba(0,0,0,0.4)}#tool-youtube-noads .app-header{padding:1rem 1.5rem;border-bottom:1px solid #e0e0e0;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;gap:2rem;box-sizing:border-box}html.dark #tool-youtube-noads .app-header{border-bottom-color:rgba(255,255,255,0.1)}#tool-youtube-noads .header-title h1{margin:0;font-size:1.5rem;font-weight:700;white-space:nowrap;color:#333333;line-height:1.2}html.dark #tool-youtube-noads .header-title h1{color:#ffffff}#tool-youtube-noads .header-title p{margin:.25rem 0 0;font-size:.9rem;color:#666666;white-space:nowrap}html.dark #tool-youtube-noads .header-title p{color:#9ca3af}#tool-youtube-noads .header-controls{width:100%;max-width:480px}#tool-youtube-noads main.yt-stage-main{padding:1.5rem;display:flex;align-items:center;justify-content:center;flex-grow:1;min-height:0;box-sizing:border-box}#tool-youtube-noads #yt-video-player-container{aspect-ratio:16/9;width:100%;height:100%;max-height:100%;background-color:#000;border-radius:8px;overflow:hidden;border:1px solid #e0e0e0;position:relative;box-sizing:border-box}html.dark #tool-youtube-noads #yt-video-player-container{border-color:rgba(255,255,255,0.1)}#tool-youtube-noads #yt-video-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%;color:#a0a0a0;background-color:#ffffff;text-align:center}html.dark #tool-youtube-noads #yt-video-placeholder{background-color:#121317;color:#6b7280}#tool-youtube-noads #yt-video-placeholder svg.yt-big-icon{width:4rem;height:4rem;fill:#a0a0a0;margin-bottom:1rem}html.dark #tool-youtube-noads #yt-video-placeholder svg.yt-big-icon{fill:#4b5563}#tool-youtube-noads #yt-video-placeholder p{font-size:1rem;color:#a0a0a0;margin:0}html.dark #tool-youtube-noads #yt-video-placeholder p{color:#6b7280}#tool-youtube-noads #yt-video-player{width:100%;height:100%;border:none;display:block}#tool-youtube-noads #yt-video-placeholder.hidden,#tool-youtube-noads #yt-video-player.hidden,#tool-youtube-noads #yt-clear-btn.hidden{display:none !important}#tool-youtube-noads .input-wrapper{position:relative;display:flex;align-items:center;border:2px solid #ccc;border-radius:10px;transition:border-color .2s;background-color:#ffffff;box-sizing:border-box}html.dark #tool-youtube-noads .input-wrapper{background-color:#1e1f23;border-color:#4b5563}#tool-youtube-noads .input-wrapper.is-focused,#tool-youtube-noads .input-wrapper:focus-within{border-color:#000000}html.dark #tool-youtube-noads .input-wrapper.is-focused,html.dark #tool-youtube-noads .input-wrapper:focus-within{border-color:#ffffff}#tool-youtube-noads #yt-video-url{flex-grow:1;width:100%;padding:10px 12px;font-size:15px;border:none;outline:0;background:transparent;appearance:none;color:#000000;position:relative;z-index:1;box-sizing:border-box}html.dark #tool-youtube-noads #yt-video-url{color:#ffffff}#tool-youtube-noads .input-wrapper label{position:absolute;top:50%;left:10px;transform:translateY(-50%);font-size:15px;color:#757575;transition:.2s ease-in-out;pointer-events:none;background:#ffffff;padding:0 5px;z-index:2}html.dark #tool-youtube-noads .input-wrapper label{background:#1e1f23;color:#9ca3af}#tool-youtube-noads #yt-video-url:focus+label,#tool-youtube-noads #yt-video-url:not(:placeholder-shown)+label{top:0;font-size:11px;color:#000000}html.dark #tool-youtube-noads #yt-video-url:focus+label,html.dark #tool-youtube-noads #yt-video-url:not(:placeholder-shown)+label{color:#ffffff}#tool-youtube-noads #yt-error-message{color:#d93025;font-size:.8rem;height:1.25rem;padding-top:.25rem}#tool-youtube-noads #yt-play-btn{background-color:transparent;border:none;border-left:2px solid #ccc;padding:10px 15px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;z-index:2;transition:border-color .2s,opacity .2s;color:#333333}html.dark #tool-youtube-noads #yt-play-btn{border-left-color:#4b5563;color:#ffffff}#tool-youtube-noads #yt-play-btn:hover{opacity:0.8}#tool-youtube-noads .dash-back-btn{flex-shrink:0;text-decoration:none;padding:10px 14px;font-size:13px;font-weight:600;border-radius:10px;background:#000;color:#fff;display:inline-flex;align-items:center;gap:6px;transition:opacity 0.2s;border:none;cursor:pointer}#tool-youtube-noads .dash-back-btn:hover{opacity:0.85}@media (max-width:768px){#tool-youtube-noads .app-container{height:auto;min-height:520px;border-radius:0;box-shadow:none}#tool-youtube-noads .app-header{flex-direction:column;align-items:flex-start;gap:1rem}#tool-youtube-noads .header-controls{width:100%;max-width:none}#tool-youtube-noads main.yt-stage-main{padding:1rem}#tool-youtube-noads .header-title h1{font-size:1.25rem}#tool-youtube-noads #yt-video-placeholder p{font-size:.9rem}}</style>
+</head>
+<body class="bg-surface text-on-surface antialiased flex h-screen h-[100dvh] overflow-hidden select-none" onkeydown="handleGlobalKey(event)">
+
+    <!-- ==================== APPLE APP STORE SIDEBAR ==================== -->
+    <aside id="desktop-sidebar" class="w-64 bg-surface-container-low border-r border-outline/10 flex-shrink-0 hidden md:flex flex-col justify-between z-40 select-none">
+        <div class="flex flex-col h-full overflow-hidden">
+            <!-- Brand & Search Header -->
+            <div class="p-2.5 pb-2 flex flex-col gap-3 border-b border-outline/10 sidebar-header-container">
+                <!-- App Store Brand (Normal Expanded View) -->
+                <div id="sidebar-header-expanded" class="flex items-center justify-between">
+                    <button onclick="showTool('discover')" class="flex items-center gap-2.5 text-left group transition-all" type="button">
+                        <div class="w-8 h-8 rounded-lg brand-zap-box bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-md flex-shrink-0">
+                            <svg class="w-4 h-4 fill-white text-white drop-shadow-sm" viewBox="0 0 24 24">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col sidebar-text-label">
+                            <span class="font-bold text-base tracking-tight text-on-surface leading-none group-hover:text-primary transition-colors">SuperTools</span>
+                            <span class="text-[11px] text-neutral-600 dark:text-neutral-400 font-medium tracking-normal mt-0.5">By <span class="font-bold text-on-surface">Petrus Siahaan</span></span>
+                        </div>
+                    </button>
+                    <!-- Controls: Collapse Sidebar Button -->
+                    <div class="flex items-center">
+                        <!-- Tombol Tutup Sidebar -->
+                        <button onclick="toggleDesktopSidebar()" id="btn-collapse-sidebar" class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center cursor-pointer" data-tooltip="Tutup sidebar" title="Tutup sidebar" aria-label="Tutup sidebar">
+                            <!-- Icon Tutup Sidebar: Panel dengan panah ke kiri [|<] -->
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="18" height="18" x="3" y="3" rx="3" ry="3"/>
+                                <path d="M9 3v18"/>
+                                <path d="m14 9-3 3 3 3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- App Store Brand (Collapsed Rail View) -->
+                <div id="sidebar-header-collapsed" class="hidden items-center justify-center">
+                    <button onclick="toggleDesktopSidebar()" id="sidebar-rail-toggle-btn" class="relative group/rail w-8 h-8 rounded-lg flex items-center justify-center transition-all cursor-pointer" data-tooltip="Buka sidebar" title="Buka sidebar" aria-label="Buka sidebar">
+                        <!-- Default: Kotak Icon Petir Elegan -->
+                        <div class="w-8 h-8 rounded-lg brand-zap-box bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-md transition-all duration-200 group-hover/rail:opacity-0 group-hover/rail:scale-75 absolute inset-0">
+                            <svg class="w-4 h-4 fill-white text-white drop-shadow-sm" viewBox="0 0 24 24">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <!-- On Hover: Icon Buka Sidebar [|>] dengan latar lembut kontras -->
+                        <div class="w-8 h-8 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center shadow-sm opacity-0 scale-75 transition-all duration-200 group-hover/rail:opacity-100 group-hover/rail:scale-100 absolute inset-0">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="18" height="18" x="3" y="3" rx="3" ry="3"/>
+                                <path d="M9 3v18"/>
+                                <path d="m12 9 3 3-3 3"/>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Instant Search Bar (Expanded View) -->
+                <div id="search-container-full" class="relative flex items-center">
+                    <span class="material-symbols-outlined absolute left-3 text-outline text-[18px] pointer-events-none">search</span>
+                    <input 
+                        id="search-input" 
+                        oninput="handleSearch(this.value)" 
+                        type="search" 
+                        class="w-full pl-9 pr-8 py-2 rounded-xl bg-surface-container text-on-surface placeholder:text-outline text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:bg-surface-container-highest transition-all" 
+                        placeholder="Cari alat (Ctrl+K)..."
+                    />
+                    <button id="search-clear-btn" onclick="clearSearch()" class="hidden absolute right-2.5 text-outline hover:text-on-surface transition">
+                        <span class="material-symbols-outlined text-[16px]">close</span>
+                    </button>
+                </div>
+
+                <!-- Instant Search Button (Collapsed View) -->
+                <div id="search-container-rail" class="hidden items-center justify-center">
+                    <button onclick="toggleMobileSearch(true)" class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors cursor-pointer" data-tooltip="Cari alat (Ctrl+K)" title="Cari alat">
+                        <span class="material-symbols-outlined text-[18px]">search</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex-1 overflow-y-auto p-3 space-y-4 sidebar-nav-container">
+                <!-- Overview -->
+                <nav class="space-y-1">
+                    <button onclick="showTool('discover')" data-tool="discover" data-tooltip="Discover Apps" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                        <span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0">today</span>
+                        <span class="truncate">Discover</span>
+                        <span class="ml-auto text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary font-semibold">Apps</span>
+                    </button>
+                </nav>
+
+                <!-- Section: Essentials (Teks Dihapus, Murni Garis Divider) -->
+                <div class="sidebar-category">
+                    <nav class="space-y-0.5">
+                        <button onclick="showTool('calculator')" data-tool="calculator" data-tooltip="Calculator" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-blue-400 flex-shrink-0">calculate</span>
+                            <span class="truncate">Calculator</span>
+                        </button>
+                        <button onclick="showTool('converter-unit')" data-tool="converter-unit" data-tooltip="Unit Converter" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-amber-400 flex-shrink-0">sync_alt</span>
+                            <span class="truncate">Unit Converter</span>
+                        </button>
+                        <button onclick="showTool('timer')" data-tool="timer" data-tooltip="Timer" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-rose-400 flex-shrink-0">hourglass_top</span>
+                            <span class="truncate">Timer</span>
+                        </button>
+                        <button onclick="showTool('stopwatch')" data-tool="stopwatch" data-tooltip="Stopwatch" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-emerald-400 flex-shrink-0">timer</span>
+                            <span class="truncate">Stopwatch</span>
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Section: Media & Audio (Teks Dihapus, Murni Garis Divider) -->
+                <div class="sidebar-category">
+                    <nav class="space-y-0.5">
+                        <button onclick="showTool('converter')" data-tool="converter" data-tooltip="Image Converter" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-purple-400 flex-shrink-0">image</span>
+                            <span class="truncate">Image Converter</span>
+                        </button>
+                        <button onclick="showTool('resizer')" data-tool="resizer" data-tooltip="Image Resizer" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-sky-400 flex-shrink-0">photo_size_select_large</span>
+                            <span class="truncate">Image Resizer</span>
+                        </button>
+                        <button onclick="showTool('color-picker')" data-tool="color-picker" data-tooltip="Color Picker" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-pink-400 flex-shrink-0">colorize</span>
+                            <span class="truncate">Color Picker</span>
+                        </button>
+                        <button onclick="showTool('media-extract')" data-tool="media-extract" data-tooltip="Video to Audio" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-violet-400 flex-shrink-0">music_note</span>
+                            <span class="truncate">Video to Audio</span>
+                            <span class="ml-auto text-[9px] px-1.5 py-0.5 rounded bg-violet-500/15 text-violet-700 dark:text-violet-300 font-bold">WAV</span>
+                        </button>
+                        <button onclick="showTool('img2pdf')" data-tool="img2pdf" data-tooltip="Image to PDF" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-red-400 flex-shrink-0">picture_as_pdf</span>
+                            <span class="truncate">Image to PDF</span>
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Section: Dev & Fun (Teks Dihapus, Murni Garis Divider) -->
+                <div class="sidebar-category">
+                    <nav class="space-y-0.5">
+                        <button onclick="showTool('text')" data-tool="text" data-tooltip="Text & JSON" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-cyan-400 flex-shrink-0">data_object</span>
+                            <span class="truncate">Text & JSON</span>
+                        </button>
+                        <button onclick="showTool('html-editor')" data-tool="html-editor" data-tooltip="HTML Live Editor" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-teal-400 flex-shrink-0">code</span>
+                            <span class="truncate">HTML Live Editor</span>
+                        </button>
+                        <button onclick="showTool('diff')" data-tool="diff" data-tooltip="Diff Checker" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-indigo-400 flex-shrink-0">difference</span>
+                            <span class="truncate">Diff Checker</span>
+                        </button>
+                        <button onclick="showTool('qr')" data-tool="qr" data-tooltip="QR Generator" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-neutral-400 flex-shrink-0">qr_code_2</span>
+                            <span class="truncate">QR Generator</span>
+                        </button>
+                        <button onclick="showTool('password')" data-tool="password" data-tooltip="Password Gen" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-amber-500 flex-shrink-0">password</span>
+                            <span class="truncate">Password Gen</span>
+                        </button>
+                        <button onclick="showTool('typing')" data-tool="typing" data-tooltip="Typing Test" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-blue-500 flex-shrink-0">keyboard</span>
+                            <span class="truncate">Typing Test</span>
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Section: Code & Obfuscation (Teks Dihapus, Murni Garis Divider) -->
+                <div class="sidebar-category">
+                    <nav class="space-y-0.5">
+                        <button onclick="showTool('packer')" data-tool="packer" data-tooltip="JS Packer" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-indigo-400 flex-shrink-0">lock</span>
+                            <span class="truncate">JS Packer</span>
+                        </button>
+                        <button onclick="showTool('unpacker')" data-tool="unpacker" data-tooltip="JS unPacker" class="tool-btn w-full flex items-center gap-3 px-3 py-1.5 rounded-xl text-xs font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">
+                            <span class="material-symbols-outlined text-[18px] text-emerald-400 flex-shrink-0">lock_open</span>
+                            <span class="truncate">JS unPacker</span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Sidebar Footer (Tombol Dark Mode di Pojok Bawah di Kedua Status) -->
+            <div class="sidebar-footer-container flex items-center">
+                <!-- Saat Expanded: Tombol Tema di Pojok Kiri Bawah -->
+                <div id="sidebar-footer-expanded" class="flex items-center">
+                    <button onclick="toggleTheme()" class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors cursor-pointer" data-tooltip="Beralih Tema (Dark/Light)" title="Beralih Tema (Dark/Light)">
+                        <span class="material-symbols-outlined text-[18px]">dark_mode</span>
+                    </button>
+                </div>
+                <!-- Saat Collapsed: Tombol Tema di Pojok Bawah Rail -->
+                <div id="sidebar-rail-footer" class="hidden items-center justify-center w-full">
+                    <button onclick="toggleTheme()" class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors cursor-pointer" data-tooltip="Beralih Tema (Dark/Light)" title="Beralih Tema (Dark/Light)">
+                        <span class="material-symbols-outlined text-[18px]">dark_mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ==================== MAIN APPLICATION CONTAINER ==================== -->
+    <div class="flex-1 flex flex-col min-w-0 h-full overflow-hidden bg-surface">
+        
+        <!-- Top Sticky Header (Cupertino Style) -->
+        <header class="relative h-16 bg-surface/80 backdrop-blur-xl border-b border-outline/10 flex items-center justify-between px-4 sm:px-6 z-30 flex-shrink-0">
+            <div class="flex items-center gap-3">
+                <!-- Mobile Menu Button (IQAir Custom Asymmetric Hamburger) -->
+                <button onclick="toggleMobile()" class="md:hidden p-2 rounded-xl hover:bg-surface-container-high text-on-surface transition flex items-center justify-center" aria-label="Buka Menu">
+                    <svg class="w-6 h-6 text-on-surface" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" d="M3 6H21M3 12H11M3 18H16"></path>
+                    </svg>
+                </button>
+                
+                <!-- History Back & Forward -->
+                <div class="hidden sm:flex items-center gap-1">
+                    <button onclick="history.back()" title="Kembali" class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors">
+                        <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                    </button>
+                    <button onclick="history.forward()" title="Maju" class="p-1.5 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors">
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                    </button>
+                </div>
+
+                <!-- Breadcrumb (Desktop View Only) -->
+                <div class="hidden md:flex items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400">
+                    <span>SuperTools</span>
+                    <span class="text-outline/40">/</span>
+                    <span id="header-active-tool" class="text-on-surface font-semibold text-sm truncate max-w-[200px] sm:max-w-none">Supertools Discover</span>
+                </div>
+            </div>
+
+            <!-- Posisi Tengah: Mobile Brand Header (Ikon Petir Biru + Teks SuperTools Center) -->
+            <div onclick="switchTool('discover')" class="md:hidden absolute left-1/2 -translate-x-1/2 flex items-center gap-2 cursor-pointer select-none py-1 px-2.5 rounded-xl hover:bg-surface-container-high/50 transition-colors" title="Kembali ke SuperTools Discover">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="#3e90ff" stroke="#3e90ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+                <span class="font-bold text-base tracking-tight text-on-surface">SuperTools</span>
+            </div>
+
+            <!-- Header Controls: Mobile Search Button (Desktop Theme Switcher Dihapus Sesuai Permintaan Pengguna) -->
+            <div class="flex items-center gap-2">
+                <!-- Mobile Quick Search Button -->
+                <button onclick="toggleMobileSearch(true)" class="md:hidden p-2 rounded-xl hover:bg-surface-container-high text-on-surface transition flex items-center justify-center" aria-label="Cari Alat">
+                    <svg class="w-5 h-5 text-on-surface" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" d="m21 21-3.636-3.636m0 0A9 9 0 1 0 4.636 4.636a9 9 0 0 0 12.728 12.728Z"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Workspace (Scrollable) -->
+        <main id="main-container" class="flex-1 overflow-y-auto px-4 py-6 md:px-8 md:py-8 pb-32">
+
+            <!-- ==================== VIEW 1: APP STORE DISCOVER (STOREFRONT) ==================== -->
+            <div id="tool-discover" class="tool-section max-w-7xl mx-auto space-y-8">
+                <!-- Sub-header & Quick Filter Tags -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[11px] font-bold text-primary tracking-widest uppercase">SuperTools Discover</span>
+                            <span class="w-1 h-1 rounded-full bg-outline"></span>
+                            <span class="text-[11px] font-medium text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">Curated Collections</span>
+                        </div>
+                        <h1 class="text-3xl font-extrabold text-on-surface tracking-tight">Kategori & Alat</h1>
+                    </div>
+                    <!-- Quick Anchor Chips / Category Filter (Bebas Scrollbar & Seamless) -->
+                    <div id="discover-category-filters" class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+                        <button onclick="filterDiscoverCategory('', this)" data-category="" class="discover-cat-btn px-3.5 py-1.5 rounded-full bg-surface-container-highest text-on-surface text-xs font-semibold hover:bg-surface-bright transition shadow-sm flex items-center gap-1.5 shrink-0 active-cat">
+                            <span class="material-symbols-outlined text-[16px] text-primary">auto_awesome</span>
+                            Semua Kategori
+                        </button>
+                        <button onclick="filterDiscoverCategory('Essentials', this)" data-category="Essentials" class="discover-cat-btn px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold hover:text-on-surface hover:bg-surface-container-high transition shrink-0">Essentials</button>
+                        <button onclick="filterDiscoverCategory('Media', this)" data-category="Media" class="discover-cat-btn px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold hover:text-on-surface hover:bg-surface-container-high transition shrink-0">Media</button>
+                        <button onclick="filterDiscoverCategory('Dev', this)" data-category="Dev" class="discover-cat-btn px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold hover:text-on-surface hover:bg-surface-container-high transition shrink-0">Dev Tools</button>
+                        <button onclick="filterDiscoverCategory('Code', this)" data-category="Code" class="discover-cat-btn px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold hover:text-on-surface hover:bg-surface-container-high transition shrink-0">Obfuscator</button>
+                    </div>
+                </div>
+
+                <!-- Hero Spotlight Featured Banner (Stitch Today Style) -->
+                <div class="relative rounded-3xl overflow-hidden p-6 sm:p-10 bg-gradient-to-r from-[#1e3a8a] via-[#312e81] to-[#1e1b4b] text-white border border-white/10 shadow-2xl flex flex-col justify-between min-h-[300px]">
+                    <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-blue-200 text-[11px] font-bold tracking-wider uppercase border border-white/20">
+                            ★ NOW TRENDING • CLIENT-SIDE
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white max-w-2xl mt-4 leading-tight">
+                            Solusi Cerdas Utilitas Modern. Cepat, Privat, & Tanpa Server.
+                        </h2>
+                        <p class="text-sm text-blue-100/90 max-w-xl mt-2 leading-relaxed">
+                            Nikmati ekosistem alat pemrosesan gambar, ekstraksi audio dari video, kalkulasi presisi, hingga proteksi kode JavaScript yang sepenuhnya beroperasi offline di peramban Anda.
+                        </p>
+                    </div>
+
+                    <div class="relative z-10 pt-6 flex flex-wrap items-center gap-3">
+                        <button onclick="showTool('media-extract')" class="px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition-all shadow-md active:scale-95 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">music_note</span>
+                            Buka Video to Audio
+                        </button>
+                        <button onclick="showTool('converter')" class="px-5 py-2.5 rounded-full bg-white/15 hover:bg-white/25 text-white font-semibold text-xs transition active:scale-95 flex items-center gap-2 border border-white/10">
+                            <span class="material-symbols-outlined text-[18px]">image</span>
+                            Image Converter (HEIC)
+                        </button>
+                        <button onclick="showTool('packer')" class="px-5 py-2.5 rounded-full bg-white/15 hover:bg-white/25 text-white font-semibold text-xs transition active:scale-95 flex items-center gap-2 border border-white/10">
+                            <span class="material-symbols-outlined text-[18px]">lock</span>
+                            JS Packer
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5-Column Grid Kartu Kategori & Alat (Stitch Categories Style) -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-bold text-on-surface tracking-tight">Koleksi Alat Unggulan</h2>
+                        <span class="text-xs text-outline">Pilih kartu untuk membuka langsung</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                        <!-- Card 1: Video to Audio -->
+                        <div onclick="showTool('media-extract')" data-tool="media-extract" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#7e57c2] to-[#5e35b1] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Featured</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">music_note</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Video to Audio</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Ekstraksi trek audio video ke file WAV murni di browser.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Media</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Calculator -->
+                        <div onclick="showTool('calculator')" data-tool="calculator" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#5d9cec] to-[#4a89dc] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Essentials</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">calculate</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Calculator</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Kalkulator cepat dengan kontrol tombol & keyboard fisik.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Math</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Image Converter -->
+                        <div onclick="showTool('converter')" data-tool="converter" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#eb5757] to-[#d63031] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">HEIC Pro</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">image</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Image Converter</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Konversi PNG, JPG, WebP, ICO, serta foto HEIC iPhone.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Media</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: JS Packer -->
+                        <div onclick="showTool('packer')" data-tool="packer" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#4b6cb7] to-[#182848] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Security</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">lock</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">JS Packer</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Proteksi dan obfuscation JavaScript Dean Edwards Base62.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Code</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: JS unPacker -->
+                        <div onclick="showTool('unpacker')" data-tool="unpacker" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#11998e] to-[#38ef7d] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Decode</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">lock_open</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">JS unPacker</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Dekompresi kode eval packer & kembalikan format rapi.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Code</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Unit Converter -->
+                        <div onclick="showTool('converter-unit')" data-tool="converter-unit" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#e67e22] to-[#d35400] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Utility</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">sync_alt</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Unit Converter</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Konversi satuan metrik, berat, dan suhu interaktif.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Essentials</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: Diff Checker -->
+                        <div onclick="showTool('diff')" data-tool="diff" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#3a7bd5] to-[#3a6073] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Dev</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">difference</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Diff Checker</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Bandingkan perbedaan teks & kode secara berdampingan.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Dev</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: Color Picker -->
+                        <div onclick="showTool('color-picker')" data-tool="color-picker" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#ec008c] to-[#fc6767] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Design</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">colorize</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Color Picker</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Pipet warna foto dengan kaca pembesar & nilai HEX/RGB.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Media</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 9: QR Generator -->
+                        <div onclick="showTool('qr')" data-tool="qr" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#232526] to-[#414345] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Generator</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">qr_code_2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">QR Generator</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Bikin kode QR custom warna dengan unduh instan.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Dev</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 10: HTML Live Editor -->
+                        <div onclick="showTool('html-editor')" data-tool="html-editor" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#00b4db] to-[#0083b0] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Sandbox</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">code</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">HTML Live Editor</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Editor HTML/CSS/JS interaktif dengan live sandbox pratinjau.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Dev</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 11: Timer -->
+                        <div onclick="showTool('timer')" data-tool="timer" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#f857a6] to-[#ff5858] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Essentials</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">hourglass_top</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Timer</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Hitung mundur presisi dengan alarm notifikasi audio.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Essentials</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 12: Stopwatch -->
+                        <div onclick="showTool('stopwatch')" data-tool="stopwatch" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#00c6ff] to-[#0072ff] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Essentials</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">timer</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Stopwatch</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Pencatat waktu putaran lap dengan presisi milidetik.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Essentials</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 13: Image Resizer -->
+                        <div onclick="showTool('resizer')" data-tool="resizer" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#4776e6] to-[#8e54e9] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Media</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">photo_size_select_large</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Image Resizer</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Ubah dimensi lebar/tinggi foto seketika tanpa kompresi rusak.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Media</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 14: Image to PDF -->
+                        <div onclick="showTool('img2pdf')" data-tool="img2pdf" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#ff416c] to-[#ff4b2b] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Document</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">picture_as_pdf</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Image to PDF</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Kompilasi foto atau dokumen scan menjadi satu PDF siap cetak.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Media</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 15: Text & JSON Utilities -->
+                        <div onclick="showTool('text')" data-tool="text" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#0575e6] to-[#021b79] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Format</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">data_object</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Text & JSON</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Formatter JSON, minifier, HTML beautifier, & case konverter.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Dev</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 16: Password Generator -->
+                        <div onclick="showTool('password')" data-tool="password" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#f12711] to-[#f5af19] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Security</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">password</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Password Gen</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Buat kata sandi acak kuat dengan standar kriptografi peramban.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Dev</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 17: Typing Test -->
+                        <div onclick="showTool('typing')" data-tool="typing" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#6a11cb] to-[#2575fc] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">Speed</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">keyboard</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">Typing Test</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Uji kecepatan dan akurasi mengetik kata per menit (WPM).</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Dev</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 18: YouTube No Ads -->
+                        <div onclick="showTool('youtube-noads')" data-tool="youtube-noads" class="discover-app-card group relative rounded-2xl overflow-hidden shadow-lg p-5 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl bg-gradient-to-br from-[#f12711] to-[#ff5858] text-white cursor-pointer min-h-[170px]">
+                            <div class="flex items-start justify-between">
+                                <span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider">No Ads</span>
+                                <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-inner group-hover:rotate-6 transition-transform">
+                                    <span class="material-symbols-outlined text-[28px]">smart_display</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white leading-tight">YouTube No Ads</h3>
+                                <p class="text-white/80 text-xs mt-1 line-clamp-2">Nonton video & playlist YouTube tanpa iklan mengganggu.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-[10px] text-white/60">Media</span>
+                                    <span class="px-3 py-1 rounded-full bg-white text-gray-900 font-bold text-[11px] shadow">Buka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 1: CALCULATOR ==================== -->
+            <div id="tool-calculator" class="tool-section hidden max-w-md mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Kalkulator</h2>
+                    <p class="text-xs text-outline mt-1">Mendukung input keyboard fisik dan keypad numerik</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6">
+                    <div class="bg-surface-container-lowest rounded-2xl p-4 mb-5 text-right border border-outline/10">
+                        <div id="calc-history" class="text-xs text-outline h-5 font-mono"></div>
+                        <div id="calc-display" class="text-3xl font-mono font-bold text-on-surface truncate">0</div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-2.5">
+                        <button onclick="calcClear()" class="calc-btn cl">C</button>
+                        <button onclick="calcInput('(')" class="calc-btn op">(</button>
+                        <button onclick="calcInput(')')" class="calc-btn op">)</button>
+                        <button onclick="calcInput('/')" class="calc-btn op">÷</button>
+                        
+                        <button onclick="calcInput('7')" class="calc-btn num">7</button>
+                        <button onclick="calcInput('8')" class="calc-btn num">8</button>
+                        <button onclick="calcInput('9')" class="calc-btn num">9</button>
+                        <button onclick="calcInput('*')" class="calc-btn op">×</button>
+
+                        <button onclick="calcInput('4')" class="calc-btn num">4</button>
+                        <button onclick="calcInput('5')" class="calc-btn num">5</button>
+                        <button onclick="calcInput('6')" class="calc-btn num">6</button>
+                        <button onclick="calcInput('-')" class="calc-btn op">−</button>
+
+                        <button onclick="calcInput('1')" class="calc-btn num">1</button>
+                        <button onclick="calcInput('2')" class="calc-btn num">2</button>
+                        <button onclick="calcInput('3')" class="calc-btn num">3</button>
+                        <button onclick="calcInput('+')" class="calc-btn op">+</button>
+
+                        <button onclick="calcInput('0')" class="calc-btn num col-span-2">0</button>
+                        <button onclick="calcInput('.')" class="calc-btn num">.</button>
+                        <button onclick="calcResult()" class="calc-btn eq">=</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 2: UNIT CONVERTER ==================== -->
+            <div id="tool-converter-unit" class="tool-section hidden max-w-xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Unit Converter</h2>
+                    <p class="text-xs text-outline mt-1">Konversi metrik panjang, massa, dan suhu seketika</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6">
+                    <div class="mb-6">
+                        <label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2">Kategori Satuan</label>
+                        <div class="grid grid-cols-3 gap-2 bg-surface-container-low p-1.5 rounded-2xl border border-outline/10">
+                            <button onclick="setUnitCat('length')" class="unit-cat-btn py-2 text-xs rounded-xl font-semibold transition-all">Panjang</button>
+                            <button onclick="setUnitCat('weight')" class="unit-cat-btn py-2 text-xs rounded-xl font-semibold transition-all">Berat</button>
+                            <button onclick="setUnitCat('temp')" class="unit-cat-btn py-2 text-xs rounded-xl font-semibold transition-all">Suhu</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-[1fr,auto,1fr] gap-4 items-center bg-surface-container-low p-5 rounded-2xl border border-outline/10">
+                        <div class="space-y-2">
+                            <input type="number" id="unit-in-val" class="w-full text-2xl font-bold p-2 border-b-2 border-primary focus:border-primary-container focus:outline-none bg-transparent text-on-surface" value="1" oninput="convertUnit()">
+                            <select id="unit-in-type" class="w-full text-xs font-medium text-on-surface-variant bg-surface-container p-2 rounded-lg border border-outline/10 focus:outline-none" onchange="convertUnit()"></select>
+                        </div>
+                        <div class="text-outline flex justify-center">
+                            <span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+                        </div>
+                        <div class="space-y-2">
+                            <input type="number" id="unit-out-val" class="w-full text-2xl font-bold p-2 border-b-2 border-outline/20 bg-transparent text-primary" readonly>
+                            <select id="unit-out-type" class="w-full text-xs font-medium text-on-surface-variant bg-surface-container p-2 rounded-lg border border-outline/10 focus:outline-none" onchange="convertUnit()"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 3: TIMER ==================== -->
+            <div id="tool-timer" class="tool-section hidden max-w-md mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Timer</h2>
+                    <p class="text-xs text-outline mt-1">Hitung mundur dengan alarm audio sintetis</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-8 text-center">
+                    <div id="timer-display" class="text-6xl font-mono font-bold text-primary mb-8 tracking-wider">00:05:00</div>
+                    
+                    <div id="timer-inputs" class="grid grid-cols-3 gap-3 mb-8">
+                        <div>
+                            <label class="text-[11px] font-bold text-outline uppercase block mb-1">Jam</label>
+                            <input type="number" id="t-h" min="0" max="99" value="0" class="w-full text-center bg-surface-container-low border border-outline/10 rounded-xl p-2.5 text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label class="text-[11px] font-bold text-outline uppercase block mb-1">Menit</label>
+                            <input type="number" id="t-m" min="0" max="59" value="5" class="w-full text-center bg-surface-container-low border border-outline/10 rounded-xl p-2.5 text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label class="text-[11px] font-bold text-outline uppercase block mb-1">Detik</label>
+                            <input type="number" id="t-s" min="0" max="59" value="0" class="w-full text-center bg-surface-container-low border border-outline/10 rounded-xl p-2.5 text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary">
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center gap-3">
+                        <button onclick="startTimer()" id="btn-timer-start" class="bg-primary hover:bg-primary-container text-on-primary px-8 py-3 rounded-full font-bold text-sm w-32 shadow-lg transition active:scale-95">Mulai</button>
+                        <button onclick="stopTimer()" id="btn-timer-stop" class="hidden bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full font-bold text-sm w-32 shadow-lg transition active:scale-95">Berhenti</button>
+                        <button onclick="resetTimer()" class="bg-surface-container-highest hover:bg-surface-bright text-on-surface px-6 py-3 rounded-full font-semibold text-sm transition active:scale-95">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 4: STOPWATCH ==================== -->
+            <div id="tool-stopwatch" class="tool-section hidden max-w-lg mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Stopwatch</h2>
+                    <p class="text-xs text-outline mt-1">Pengukur waktu presisi tinggi dengan pencatatan putaran</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-8 text-center">
+                    <div id="sw-display" class="text-5xl sm:text-6xl font-mono font-bold text-primary mb-8 tabular-nums tracking-wider">00:00:00.00</div>
+                    <div class="flex justify-center flex-wrap gap-3 mb-6">
+                        <button onclick="swStart()" id="sw-btn-start" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-bold text-xs shadow-md transition active:scale-95 w-24">Mulai</button>
+                        <button onclick="swStop()" id="sw-btn-stop" class="hidden bg-red-500 hover:bg-red-600 text-white px-6 py-2.5 rounded-full font-bold text-xs shadow-md transition active:scale-95 w-24">Berhenti</button>
+                        <button onclick="swLap()" id="sw-btn-lap" class="bg-surface-container-highest hover:bg-surface-bright text-on-surface px-6 py-2.5 rounded-full font-semibold text-xs transition active:scale-95 w-24">Putaran</button>
+                        <button onclick="swReset()" class="bg-surface-container-low hover:bg-surface-container-high text-outline hover:text-on-surface px-6 py-2.5 rounded-full font-semibold text-xs transition active:scale-95 w-24">Reset</button>
+                    </div>
+                    <div id="sw-laps" class="max-h-48 overflow-y-auto border-t border-outline/10 pt-4 space-y-2 text-xs font-mono text-outline"></div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 5: VIDEO TO AUDIO ==================== -->
+            <div id="tool-media-extract" class="tool-section hidden max-w-2xl mx-auto">
+                <div class="mb-6 text-center">
+                    <div class="flex items-center justify-center gap-2">
+                        <h2 class="text-2xl font-bold text-on-surface">Video to Audio</h2>
+                        <span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">WAV Client-Side</span>
+                    </div>
+                    <p class="text-xs text-outline mt-1">Ekstrak trek audio dari file video MP4/MKV/WebM langsung di peramban tanpa kirim ke server.</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6 sm:p-8">
+                    <div class="border-2 border-dashed border-outline/20 hover:border-primary/50 rounded-2xl p-8 text-center cursor-pointer hover:bg-surface-container-high/50 transition" onclick="document.getElementById('file-video').click()">
+                        <input type="file" id="file-video" class="hidden" accept="video/*" onchange="handleVideoFile(this.files[0])">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-3">
+                            <span class="material-symbols-outlined text-[32px]">movie</span>
+                        </div>
+                        <p class="text-sm font-semibold text-on-surface">Klik atau seret file video ke sini</p>
+                        <p class="text-xs text-outline mt-1">Mendukung MP4, MKV, WebM, MOV</p>
+                    </div>
+
+                    <!-- Video File Info Card -->
+                    <div id="video-info-card" class="hidden mt-4 p-4 rounded-2xl bg-surface-container-low border border-outline/10 flex items-center justify-between">
+                        <div class="flex items-center gap-3 overflow-hidden">
+                            <span class="material-symbols-outlined text-primary text-[24px]">video_file</span>
+                            <div class="min-w-0">
+                                <p id="video-info-name" class="text-xs font-bold text-on-surface truncate">video.mp4</p>
+                                <p id="video-info-size" class="text-[11px] text-outline">0 MB</p>
+                            </div>
+                        </div>
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-semibold">Siap Ekstrak</span>
+                    </div>
+
+                    <div id="video-process-area" class="hidden mt-6 space-y-3">
+                        <button id="btn-extract-audio" onclick="extractAudio()" class="w-full bg-primary hover:bg-primary-container text-on-primary font-bold py-3 rounded-full text-xs shadow-lg transition active:scale-95 flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">audiotrack</span>
+                            <span>Konversi ke Audio WAV</span>
+                        </button>
+                        <p id="extract-status-text" class="text-center text-xs text-outline font-medium"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 6: IMAGE CONVERTER ==================== -->
+            <div id="tool-converter" class="tool-section hidden max-w-3xl mx-auto">
+                <div class="mb-6 text-center">
+                    <div class="flex items-center justify-center gap-2">
+                        <h2 class="text-2xl font-bold text-on-surface">Image Converter</h2>
+                        <span class="px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 text-[10px] font-bold">HEIC Supported</span>
+                    </div>
+                    <p class="text-xs text-outline mt-1">Konversi PNG, JPG, WebP, ICO, serta foto format HEIC/HEIF dari kamera iPhone.</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6 sm:p-8">
+                    <div id="drop-zone-converter" class="border-2 border-dashed border-outline/20 hover:border-primary/50 rounded-2xl p-8 text-center hover:bg-surface-container-high/50 transition cursor-pointer" onclick="document.getElementById('file-converter').click()">
+                        <input type="file" id="file-converter" class="hidden" accept="image/*, .heic, .heif" multiple onchange="handleConverterFiles(this.files)">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center mx-auto mb-3">
+                            <span class="material-symbols-outlined text-[32px]">photo_library</span>
+                        </div>
+                        <p class="text-sm font-semibold text-on-surface">Pilih atau seret gambar ke sini</p>
+                        <p class="text-xs text-outline mt-1">Mendukung banyak file sekaligus</p>
+                    </div>
+                    <div id="converter-controls" class="hidden mt-6 pt-6 border-t border-outline/10">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+                            <div>
+                                <label class="block text-xs font-bold text-outline uppercase tracking-wider mb-1">Format Target</label>
+                                <select id="convert-format" class="w-full bg-surface-container-low border border-outline/10 text-on-surface rounded-xl p-2.5 text-xs font-semibold focus:outline-none">
+                                    <option value="image/jpeg">JPEG (.jpg)</option>
+                                    <option value="image/png">PNG (.png)</option>
+                                    <option value="image/webp">WEBP (.webp)</option>
+                                    <option value="ico">Favicon (.ico)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-outline uppercase tracking-wider mb-1">Kualitas Kompresi</label>
+                                <input type="range" id="convert-quality" min="0.1" max="1" step="0.1" value="0.9" class="w-full h-9 accent-primary">
+                            </div>
+                            <div class="flex items-end">
+                                <button onclick="processConverter()" class="w-full bg-primary hover:bg-primary-container text-on-primary font-bold py-2.5 px-4 rounded-full text-xs flex justify-center items-center gap-2 shadow-lg transition active:scale-95">
+                                    <span id="conv-btn-text">Konversi Semua</span>
+                                    <div id="conv-loader" class="loader hidden"></div>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="converter-preview-list" class="space-y-2 mt-4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 7: IMAGE RESIZER ==================== -->
+            <div id="tool-resizer" class="tool-section hidden max-w-2xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Image Resizer</h2>
+                    <p class="text-xs text-outline mt-1">Ubah resolusi gambar dengan presisi pixel dan kunci rasio aspek</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6 sm:p-8">
+                    <div class="border-2 border-dashed border-outline/20 hover:border-primary/50 rounded-2xl p-6 text-center cursor-pointer hover:bg-surface-container-high/50 transition mb-4" onclick="document.getElementById('file-resizer').click()">
+                        <input type="file" id="file-resizer" class="hidden" accept="image/*" onchange="handleResizerFile(this.files[0])">
+                        <span class="text-xs font-semibold text-on-surface flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-[20px] text-sky-400">upload</span>
+                            Pilih Gambar untuk Diubah Resolusi
+                        </span>
+                    </div>
+                    <div id="resizer-workspace" class="hidden space-y-4">
+                        <div class="rounded-2xl overflow-hidden bg-surface-container-low border border-outline/10 p-2 flex items-center justify-center max-h-64">
+                            <img id="resizer-preview" class="max-h-60 object-contain rounded-xl">
+                        </div>
+                        <div class="text-center text-xs text-outline">Dimensi Asli: <span id="orig-dims" class="font-mono text-primary font-bold"></span></div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="text-[11px] font-bold text-outline block mb-1">Lebar (px)</label>
+                                <input type="number" id="resize-width" class="w-full bg-surface-container-low border border-outline/10 rounded-xl p-2 text-xs font-mono text-on-surface focus:outline-none" oninput="calcHeight()">
+                            </div>
+                            <div>
+                                <label class="text-[11px] font-bold text-outline block mb-1">Tinggi (px)</label>
+                                <input type="number" id="resize-height" class="w-full bg-surface-container-low border border-outline/10 rounded-xl p-2 text-xs font-mono text-on-surface focus:outline-none" oninput="calcWidth()">
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-on-surface-variant">
+                            <input type="checkbox" id="aspect-ratio" checked class="rounded accent-primary">
+                            <label for="aspect-ratio" class="cursor-pointer">Kunci Rasio Aspek (Maintain Aspect Ratio)</label>
+                        </div>
+                        <button onclick="processResizer()" class="w-full bg-primary hover:bg-primary-container text-on-primary font-bold py-3 rounded-full text-xs shadow-lg transition active:scale-95">Unduh Gambar Baru</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 8: COLOR PICKER ==================== -->
+            <div id="tool-color-picker" class="tool-section hidden max-w-4xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Color Picker</h2>
+                    <p class="text-xs text-outline mt-1">Muat gambar dan <span class="font-bold text-primary">KLIK</span> untuk mengunci kode warna HEX & RGB</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="border-2 border-dashed border-outline/20 hover:border-primary/50 rounded-2xl p-4 text-center cursor-pointer hover:bg-surface-container-high/50 transition mb-4" onclick="document.getElementById('color-file').click()">
+                                <input type="file" id="color-file" class="hidden" accept="image/*" onchange="initColorPicker(this.files[0])">
+                                <span class="text-xs font-semibold text-on-surface flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-[20px] text-pink-400">add_photo_alternate</span>
+                                    Pilih Gambar Sampel Warna
+                                </span>
+                            </div>
+                            <div class="relative overflow-hidden rounded-2xl border border-outline/10 bg-surface-container-low flex justify-center items-center min-h-[300px] max-h-[460px]">
+                                <canvas id="color-canvas" class="max-w-full cursor-crosshair"></canvas>
+                                <div id="color-placeholder" class="text-outline text-xs absolute pointer-events-none">Belum ada gambar yang dimuat</div>
+                                <div id="color-magnifier" class="hidden absolute pointer-events-none border-2 border-white shadow-2xl rounded-full w-24 h-24 bg-no-repeat z-20"></div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-72 flex flex-col gap-4">
+                            <div class="p-5 rounded-2xl bg-surface-container-low border border-outline/10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-[11px] font-bold uppercase text-outline">Warna Terpilih</span>
+                                    <div id="picked-color-preview" class="w-8 h-8 rounded-xl border-2 border-white shadow-md" style="background-color: #ffffff;"></div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="text-[10px] font-bold text-outline uppercase block mb-1">HEX</label>
+                                        <div class="relative">
+                                            <input type="text" id="picked-hex" class="w-full font-mono text-xs border border-outline/10 rounded-xl p-2.5 pr-8 bg-surface-container text-on-surface cursor-pointer" value="#FFFFFF" readonly onclick="copyToClip(this)">
+                                            <span class="material-symbols-outlined text-[16px] absolute right-2.5 top-2.5 text-outline pointer-events-none">content_copy</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="text-[10px] font-bold text-outline uppercase block mb-1">RGB</label>
+                                        <div class="relative">
+                                            <input type="text" id="picked-rgb" class="w-full font-mono text-xs border border-outline/10 rounded-xl p-2.5 pr-8 bg-surface-container text-on-surface cursor-pointer" value="rgb(255,255,255)" readonly onclick="copyToClip(this)">
+                                            <span class="material-symbols-outlined text-[16px] absolute right-2.5 top-2.5 text-outline pointer-events-none">content_copy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-primary/10 border border-primary/20 text-on-surface text-xs leading-relaxed">
+                                <p><strong>Petunjuk:</strong> Arahkan kursor ke atas gambar untuk melihat pembesar. <strong>Klik kiri</strong> untuk mengunci warna dan menyalin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 9: IMAGE TO PDF ==================== -->
+            <div id="tool-img2pdf" class="tool-section hidden max-w-2xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Image to PDF</h2>
+                    <p class="text-xs text-outline mt-1">Kompilasi sekumpulan foto atau dokumen scan menjadi satu berkas PDF siap cetak</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6 sm:p-8">
+                    <input type="file" id="file-pdf" class="hidden" accept="image/*" multiple onchange="handlePdfFiles(this.files)">
+                    <button onclick="document.getElementById('file-pdf').click()" class="w-full border-2 border-dashed border-outline/20 hover:border-primary/50 rounded-2xl p-6 text-center hover:bg-surface-container-high/50 transition mb-4 text-xs font-semibold text-on-surface flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-[20px] text-red-400">note_add</span>
+                        Tambah Gambar (.jpg, .png)
+                    </button>
+                    <div id="pdf-queue" class="grid grid-cols-3 sm:grid-cols-4 gap-3 mb-6"></div>
+                    <button onclick="generatePDF()" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-full text-xs shadow-lg transition active:scale-95">Unduh Berkas PDF</button>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 10: TEXT & JSON TOOLS ==================== -->
+            <div id="tool-text" class="tool-section hidden max-w-5xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Text & JSON Utilities</h2>
+                    <p class="text-xs text-outline mt-1">Formatter JSON, minifier, HTML beautifier, serta konverter format string</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="flex flex-col h-[460px] bg-surface-container rounded-3xl p-4 border border-outline/10">
+                        <div class="flex items-center justify-between pb-2 mb-2 border-b border-outline/10">
+                            <span class="text-[11px] font-bold text-outline uppercase">Input Teks / JSON</span>
+                            <span class="text-[10px] text-outline font-mono">Panjang: <b id="char-count" class="text-primary">0</b></span>
+                        </div>
+                        <textarea id="text-input" class="flex-1 bg-surface-container-low border border-outline/10 rounded-2xl p-3 text-xs font-mono resize-none focus:outline-none focus:ring-1 focus:ring-primary text-on-surface" placeholder="Tempelkan JSON, HTML, atau teks di sini..."></textarea>
+                    </div>
+                    <div class="flex flex-col h-[460px] bg-surface-container rounded-3xl p-4 border border-outline/10">
+                        <div class="flex items-center justify-between pb-2 mb-2 border-b border-outline/10">
+                            <span class="text-[11px] font-bold text-outline uppercase">Hasil Pemrosesan</span>
+                            <button onclick="copyToClip(document.getElementById('text-output').value)" class="text-[11px] font-semibold text-primary hover:underline">Salin</button>
+                        </div>
+                        <textarea id="text-output" class="flex-1 bg-surface-container-lowest border border-outline/10 rounded-2xl p-3 text-xs font-mono resize-none focus:outline-none text-on-surface" readonly placeholder="Output hasil transformasi..."></textarea>
+                        <div class="grid grid-cols-3 gap-1.5 mt-3">
+                            <button onclick="transformText('json')" class="py-2 bg-primary/20 hover:bg-primary/30 text-primary rounded-xl text-[11px] font-bold transition">Beautify JSON</button>
+                            <button onclick="transformText('html')" class="py-2 bg-primary/20 hover:bg-primary/30 text-primary rounded-xl text-[11px] font-bold transition">Beautify HTML</button>
+                            <button onclick="transformText('minify')" class="py-2 bg-surface-container-highest hover:bg-surface-bright text-on-surface rounded-xl text-[11px] font-bold transition">Minify JSON</button>
+                            <button onclick="transformText('uppercase')" class="py-2 bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant rounded-xl text-[11px] font-medium transition">UPPERCASE</button>
+                            <button onclick="transformText('lowercase')" class="py-2 bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant rounded-xl text-[11px] font-medium transition">lowercase</button>
+                            <button onclick="transformText('lorem')" class="py-2 bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant rounded-xl text-[11px] font-medium transition">Lorem Ipsum</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 11: HTML LIVE EDITOR ==================== -->
+            <div id="tool-html-editor" class="tool-section hidden max-w-6xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">HTML Live Editor</h2>
+                    <p class="text-xs text-outline mt-1">Editor kode langsung dengan live pratinjau rendering sandbox</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 h-[560px]">
+                    <div class="flex flex-col bg-surface-container rounded-3xl p-4 border border-outline/10">
+                        <span class="text-[11px] font-bold text-outline uppercase mb-2">Kode (HTML / CSS / JS)</span>
+                        <textarea id="html-code" class="flex-1 border border-outline/10 rounded-2xl p-4 font-mono text-xs resize-none focus:outline-none focus:ring-1 focus:ring-primary bg-surface-container-lowest text-on-surface" placeholder="<h1>Halo Dunia</h1>" oninput="renderHTML()"></textarea>
+                    </div>
+                    <div class="flex flex-col bg-surface-container rounded-3xl p-4 border border-outline/10">
+                        <span class="text-[11px] font-bold text-outline uppercase mb-2">Pratinjau Sandbox</span>
+                        <iframe id="html-preview" sandbox="allow-scripts" class="flex-1 w-full border border-outline/10 rounded-2xl bg-white"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 12: DIFF CHECKER ==================== -->
+            <div id="tool-diff" class="tool-section hidden max-w-5xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Diff Checker</h2>
+                    <p class="text-xs text-outline mt-1">Periksa perbedaan antara teks asli dan teks modifikasi</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6">
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div>
+                            <label class="text-[11px] font-bold text-outline uppercase block mb-1">Teks Asli (Original)</label>
+                            <textarea id="diff-orig" class="w-full h-40 bg-surface-container-low border border-outline/10 rounded-2xl p-3 text-xs font-mono text-on-surface focus:outline-none" placeholder="Masukkan teks asli..."></textarea>
+                        </div>
+                        <div>
+                            <label class="text-[11px] font-bold text-outline uppercase block mb-1">Teks Modifikasi (Modified)</label>
+                            <textarea id="diff-mod" class="w-full h-40 bg-surface-container-low border border-outline/10 rounded-2xl p-3 text-xs font-mono text-on-surface focus:outline-none" placeholder="Masukkan teks perubahan..."></textarea>
+                        </div>
+                    </div>
+                    <button onclick="runDiff()" class="w-full bg-primary hover:bg-primary-container text-on-primary font-bold py-3 rounded-full text-xs shadow-lg transition active:scale-95 mb-4">Bandingkan Perbedaan</button>
+                    <div class="grid grid-cols-2 border border-outline/10 rounded-2xl overflow-hidden bg-surface-container-lowest">
+                        <div id="diff-out-orig" class="bg-surface-container-low p-2"></div>
+                        <div id="diff-out-mod" class="bg-surface-container-low border-l border-outline/10 p-2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 13: QR GENERATOR ==================== -->
+            <div id="tool-qr" class="tool-section hidden max-w-3xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">QR Code Generator</h2>
+                    <p class="text-xs text-outline mt-1">Buat kode QR kustom beresolusi tinggi dengan pemilihan warna</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div>
+                                <label class="text-[11px] font-bold text-outline uppercase block mb-1">Teks / URL Tautan</label>
+                                <textarea id="qr-text" class="w-full bg-surface-container-low border border-outline/10 rounded-2xl p-3 text-xs text-on-surface focus:outline-none" rows="3" placeholder="https://example.com atau pesan teks..."></textarea>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="text-[10px] font-bold text-outline uppercase block mb-1">Warna Pola</label>
+                                    <input type="color" id="qr-fg" value="#000000" class="w-full h-10 rounded-xl bg-transparent cursor-pointer">
+                                </div>
+                                <div>
+                                    <label class="text-[10px] font-bold text-outline uppercase block mb-1">Warna Latar</label>
+                                    <input type="color" id="qr-bg" value="#ffffff" class="w-full h-10 rounded-xl bg-transparent cursor-pointer">
+                                </div>
+                            </div>
+                            <button onclick="generateQR()" class="w-full bg-primary hover:bg-primary-container text-on-primary font-bold py-3 rounded-full text-xs shadow-lg transition active:scale-95">Generate QR Code</button>
+                        </div>
+                        <div class="bg-surface-container-low rounded-2xl border border-outline/10 flex flex-col items-center justify-center p-6 min-h-[220px]">
+                            <div id="qr-output" class="p-3 bg-white rounded-xl shadow-md"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 14: PASSWORD GENERATOR ==================== -->
+            <div id="tool-password" class="tool-section hidden max-w-xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Password Generator</h2>
+                    <p class="text-xs text-outline mt-1">Pembuat kata sandi acak dengan tingkat entropi tinggi</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6 sm:p-8">
+                    <div class="relative mb-6">
+                        <input id="pass-output" class="w-full bg-surface-container-lowest border border-outline/10 p-3.5 rounded-2xl text-center font-mono font-bold text-lg text-primary" readonly onclick="copyToClip(this)">
+                    </div>
+                    <div class="mb-5">
+                        <div class="flex justify-between text-xs font-semibold text-outline mb-1">
+                            <span>Panjang Sandi</span>
+                            <span id="pass-len-val" class="text-primary font-mono font-bold">16</span>
+                        </div>
+                        <input type="range" id="pass-len" min="6" max="64" value="16" class="w-full h-8 accent-primary" oninput="document.getElementById('pass-len-val').innerText=this.value; generatePassword()">
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                        <label class="p-2.5 rounded-xl bg-surface-container-low border border-outline/10 flex items-center gap-2 text-xs text-on-surface cursor-pointer">
+                            <input type="checkbox" id="pass-upper" checked onchange="generatePassword()" class="rounded accent-primary"> A-Z
+                        </label>
+                        <label class="p-2.5 rounded-xl bg-surface-container-low border border-outline/10 flex items-center gap-2 text-xs text-on-surface cursor-pointer">
+                            <input type="checkbox" id="pass-lower" checked onchange="generatePassword()" class="rounded accent-primary"> a-z
+                        </label>
+                        <label class="p-2.5 rounded-xl bg-surface-container-low border border-outline/10 flex items-center gap-2 text-xs text-on-surface cursor-pointer">
+                            <input type="checkbox" id="pass-num" checked onchange="generatePassword()" class="rounded accent-primary"> 0-9
+                        </label>
+                        <label class="p-2.5 rounded-xl bg-surface-container-low border border-outline/10 flex items-center gap-2 text-xs text-on-surface cursor-pointer">
+                            <input type="checkbox" id="pass-sym" checked onchange="generatePassword()" class="rounded accent-primary"> #@!
+                        </label>
+                    </div>
+                    <button onclick="generatePassword()" class="w-full bg-primary hover:bg-primary-container text-on-primary font-bold py-3 rounded-full text-xs shadow-lg transition active:scale-95">Acak Ulang Sandi</button>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 15: TYPING TEST ==================== -->
+            <div id="tool-typing" class="tool-section hidden max-w-2xl mx-auto">
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-on-surface">Typing Speed Test</h2>
+                    <p class="text-xs text-outline mt-1">Uji kecepatan mengetik dan jumlah kata per menit (WPM)</p>
+                </div>
+                <div class="bg-surface-container rounded-3xl shadow-xl border border-outline/10 p-6 sm:p-8 text-center">
+                    <div class="flex justify-between mb-4 text-xs font-bold text-outline">
+                        <span>WAKTU: <b id="tt-time" class="text-primary font-mono text-sm">60</b>s</span>
+                        <span>KECEPATAN: <b id="tt-wpm" class="text-emerald-400 font-mono text-sm">0</b> WPM</span>
+                    </div>
+                    <div id="tt-text-display" class="text-left text-sm font-mono leading-relaxed mb-4 p-4 bg-surface-container-lowest border border-outline/10 rounded-2xl select-none h-32 overflow-y-auto relative text-outline">
+                        Klik "Mulai Tes" untuk memulai...
+                    </div>
+                    <textarea id="tt-input" class="w-full bg-surface-container-low border border-outline/10 rounded-2xl p-3 font-mono text-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Ketik di sini saat tes dimulai..." disabled oninput="handleTyping()"></textarea>
+                    <button onclick="startTypingTest()" id="tt-btn" class="mt-4 bg-primary hover:bg-primary-container text-on-primary font-bold px-8 py-3 rounded-full text-xs shadow-lg transition active:scale-95">Mulai Tes</button>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 16: JS PACKER ==================== -->
+            <div id="tool-packer" class="tool-section hidden max-w-5xl mx-auto">
+                <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h2 class="text-2xl font-bold text-on-surface">JavaScript Packer</h2>
+                            <span class="px-2.5 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20">Dean Edwards</span>
+                        </div>
+                        <p class="text-outline text-xs mt-1">Kompresi dan obfuscation JavaScript kamus Base62 Dean Edwards secara offline.</p>
+                    </div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <button onclick="loadPackerSample()" class="px-3 py-1.5 bg-surface-container border border-outline/10 hover:bg-surface-container-high text-on-surface rounded-xl text-xs font-medium transition">Contoh Kode</button>
+                        <input type="file" id="packer-file-input" class="hidden" accept=".js,.txt" onchange="handlePackerUpload(this.files[0])">
+                        <button onclick="document.getElementById('packer-file-input').click()" class="px-3 py-1.5 bg-surface-container border border-outline/10 hover:bg-surface-container-high text-on-surface rounded-xl text-xs font-medium transition">Muat .js</button>
+                        <button onclick="clearPacker()" class="px-3 py-1.5 bg-surface-container border border-red-500/20 hover:bg-red-500/10 text-red-400 rounded-xl text-xs font-medium transition">Bersihkan</button>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <!-- Input Panel -->
+                    <div class="bg-surface-container rounded-3xl border border-outline/10 shadow-xl flex flex-col h-[480px] overflow-hidden">
+                        <div class="p-3.5 border-b border-outline/10 flex items-center justify-between bg-surface-container-low">
+                            <span class="text-[11px] font-bold text-outline uppercase tracking-wider">Source JS (Input)</span>
+                            <div class="flex items-center gap-2">
+                                <span id="packer-input-stats" class="text-[10px] bg-surface-container text-outline px-2 py-0.5 rounded-full font-mono">0 Karakter</span>
+                                <button onclick="pastePackerCode()" class="text-[11px] text-primary hover:underline font-medium">Tempel</button>
+                            </div>
+                        </div>
+                        <div class="flex-1 p-3">
+                            <textarea id="packer-input" class="w-full h-full border border-outline/10 rounded-2xl p-3 text-xs font-mono resize-none focus:outline-none bg-surface-container-lowest text-on-surface" placeholder="Tempel kode JavaScript mentah di sini..."></textarea>
+                        </div>
+                        <div class="p-3 border-t border-outline/10 bg-surface-container-low flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex items-center gap-3">
+                                <label class="inline-flex items-center gap-1.5 text-xs text-on-surface-variant cursor-pointer">
+                                    <input type="checkbox" id="packer-base62" checked class="rounded accent-primary"> Base62
+                                </label>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-on-surface-variant cursor-pointer">
+                                    <input type="checkbox" id="packer-shrink" checked class="rounded accent-primary"> Shrink
+                                </label>
+                            </div>
+                            <button onclick="doPackerProcess()" class="bg-primary hover:bg-primary-container text-on-primary px-5 py-2 rounded-full text-xs font-bold shadow-md transition active:scale-95">Pack JavaScript</button>
+                        </div>
+                    </div>
+
+                    <!-- Output Panel -->
+                    <div class="bg-surface-container rounded-3xl border border-outline/10 shadow-xl flex flex-col h-[480px] overflow-hidden">
+                        <div class="p-3.5 border-b border-outline/10 flex items-center justify-between bg-surface-container-low">
+                            <span class="text-[11px] font-bold text-outline uppercase tracking-wider">Packed Output</span>
+                            <button onclick="downloadPackerCode()" class="text-[11px] text-outline hover:text-primary font-medium flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[15px]">download</span> Unduh .js
+                            </button>
+                        </div>
+                        <div class="flex-1 p-3">
+                            <textarea id="packer-output" class="w-full h-full border border-outline/10 rounded-2xl p-3 text-xs font-mono resize-none focus:outline-none bg-surface-container-lowest text-on-surface" readonly placeholder="Hasil kode ter-pack akan muncul di sini..."></textarea>
+                        </div>
+                        <div class="p-3 border-t border-outline/10 bg-surface-container-low flex items-center justify-between">
+                            <span id="packer-exec-time" class="text-[10px] text-outline font-mono">Waktu: -</span>
+                            <div class="flex items-center gap-2">
+                                <button onclick="doPackerDecode()" class="px-3 py-1.5 bg-surface-container border border-outline/10 hover:bg-surface-container-high text-on-surface rounded-xl text-xs font-medium transition">Decode</button>
+                                <button onclick="copyPackerCode()" class="px-4 py-1.5 bg-primary hover:bg-primary-container text-on-primary rounded-full text-xs font-bold transition active:scale-95">Salin Kode</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 17: JS UNPACKER ==================== -->
+            <div id="tool-unpacker" class="tool-section hidden max-w-5xl mx-auto">
+                <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h2 class="text-2xl font-bold text-on-surface">JavaScript unPacker</h2>
+                            <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-400 text-[10px] font-bold rounded-full border border-emerald-500/20">MatthewFL</span>
+                        </div>
+                        <p class="text-outline text-xs mt-1">Dekompresi otomatis dan deobfuskasi kode eval Dean Edwards secara offline.</p>
+                    </div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <button onclick="loadUnpackerSample()" class="px-3 py-1.5 bg-surface-container border border-outline/10 hover:bg-surface-container-high text-on-surface rounded-xl text-xs font-medium transition">Contoh Kode</button>
+                        <input type="file" id="unpacker-file-input" class="hidden" accept=".js,.txt" onchange="handleUnpackerUpload(this.files[0])">
+                        <button onclick="document.getElementById('unpacker-file-input').click()" class="px-3 py-1.5 bg-surface-container border border-outline/10 hover:bg-surface-container-high text-on-surface rounded-xl text-xs font-medium transition">Muat .js</button>
+                        <button onclick="clearUnpacker()" class="px-3 py-1.5 bg-surface-container border border-red-500/20 hover:bg-red-500/10 text-red-400 rounded-xl text-xs font-medium transition">Bersihkan</button>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <!-- Input Panel -->
+                    <div class="bg-surface-container rounded-3xl border border-outline/10 shadow-xl flex flex-col h-[480px] overflow-hidden">
+                        <div class="p-3.5 border-b border-outline/10 flex items-center justify-between bg-surface-container-low">
+                            <span class="text-[11px] font-bold text-outline uppercase tracking-wider">Packed Input</span>
+                            <div class="flex items-center gap-2">
+                                <span id="unpacker-input-stats" class="text-[10px] bg-surface-container text-outline px-2 py-0.5 rounded-full font-mono">0 Karakter</span>
+                                <button onclick="pasteUnpackerCode()" class="text-[11px] text-primary hover:underline font-medium">Tempel</button>
+                            </div>
+                        </div>
+                        <div class="flex-1 p-3">
+                            <textarea id="unpacker-input" class="w-full h-full border border-outline/10 rounded-2xl p-3 text-xs font-mono resize-none focus:outline-none bg-surface-container-lowest text-on-surface" placeholder="Tempel kode eval(function(p,a,c,k,e,r)...) di sini..."></textarea>
+                        </div>
+                        <div class="p-3 border-t border-outline/10 bg-surface-container-low flex items-center justify-between">
+                            <span class="text-[10px] text-outline font-mono">Tekan Ctrl + Enter</span>
+                            <button onclick="doUnPackProcess()" class="bg-primary hover:bg-primary-container text-on-primary px-5 py-2 rounded-full text-xs font-bold shadow-md transition active:scale-95">UnPack JavaScript</button>
+                        </div>
+                    </div>
+
+                    <!-- Output Panel -->
+                    <div class="bg-surface-container rounded-3xl border border-outline/10 shadow-xl flex flex-col h-[480px] overflow-hidden">
+                        <div class="p-3.5 border-b border-outline/10 flex items-center justify-between bg-surface-container-low">
+                            <span class="text-[11px] font-bold text-outline uppercase tracking-wider">Deobfuscated JS</span>
+                            <button onclick="downloadUnpackedCode()" class="text-[11px] text-outline hover:text-primary font-medium flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[15px]">download</span> Unduh .js
+                            </button>
+                        </div>
+                        <div class="flex-1 p-3">
+                            <textarea id="unpacker-output" class="w-full h-full border border-outline/10 rounded-2xl p-3 text-xs font-mono resize-none focus:outline-none bg-surface-container-lowest text-on-surface" readonly placeholder="Hasil kode yang telah di-unpack akan muncul di sini..."></textarea>
+                        </div>
+                        <div class="p-3 border-t border-outline/10 bg-surface-container-low flex items-center justify-between">
+                            <span id="unpacker-exec-time" class="text-[10px] text-outline font-mono">Waktu: -</span>
+                            <div class="flex items-center gap-2">
+                                <button id="unpacker-toggle-minify-btn" onclick="toggleUnpackMinify()" class="px-3 py-1.5 bg-surface-container border border-outline/10 hover:bg-surface-container-high text-on-surface rounded-xl text-xs font-medium transition">
+                                    <span id="unpacker-minify-label">Minify JS</span>
+                                </button>
+                                <button onclick="copyUnpackedCode()" class="px-4 py-1.5 bg-primary hover:bg-primary-container text-on-primary rounded-full text-xs font-bold transition active:scale-95">Salin Kode</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== TOOL 18: YOUTUBE NO ADS ==================== -->
+            <div id="tool-youtube-noads" class="tool-section hidden">
+                <div class="app-container">
+                    <header class="app-header">
+                        <div class="header-title">
+                            <h1>YouTube NoAds</h1>
+                            <p>version 2.0 &mdash; Gracely &copy; 2024-2026</p>
+                        </div>
+                        <div class="header-controls">
+                            <div style="display: flex; gap: 10px; align-items: center; width: 100%;">
+                                <div class="input-wrapper" style="flex: 1;">
+                                    <input type="text" id="yt-video-url" placeholder=" " autocomplete="off">
+                                    <label for="yt-video-url">YouTube URL</label>
+                                    <button id="yt-clear-btn" type="button" class="hidden" style="background: none; border: none; padding: 0 8px; color: #999; cursor: pointer;" title="Hapus URL">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">close</span>
+                                    </button>
+                                    <button id="yt-play-btn" aria-label="Watch" type="button" title="Putar Video">
+                                        <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    </button>
+                                </div>
+                                <button type="button" onclick="showTool('discover')" class="dash-back-btn" title="Back to Dashboard">
+                                    <span class="material-symbols-outlined" style="font-size: 18px;">dashboard</span> <span>Dashboard</span>
+                                </button>
+                            </div>
+                            <div id="yt-error-message"></div>
+                        </div>
+                    </header>
+
+                    <main class="yt-stage-main">
+                        <section id="yt-video-player-container">
+                            <div id="yt-video-placeholder">
+                                <svg class="yt-big-icon" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                <p>Enter a YouTube video/playlist URL to start watching</p>
+                            </div>
+                            <iframe id="yt-video-player" class="hidden"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen></iframe>
+                        </section>
+                    </main>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- ==================== MOBILE NAVIGATION BOTTOM SHEET (IQAIR STYLE) ==================== -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm md:hidden flex flex-col justify-end transition-opacity duration-300" onclick="toggleMobile(false)">
+        <div id="mobile-sheet-panel" class="mobile-sheet-panel mobile-sheet-closed w-full max-h-[85vh] bg-surface-container rounded-t-[32px] border-t border-outline/10 shadow-2xl p-5 sm:p-6 overflow-y-auto flex flex-col" onclick="event.stopPropagation()">
+            
+            <!-- IQAir Drag Handle Indicator (Abu-abu Halus Rounded) -->
+            <div class="w-14 h-1.5 rounded-full bg-neutral-300 dark:bg-neutral-600 mx-auto mb-4 shrink-0"></div>
+
+            <!-- Dark/Light Mode Switcher: Langsung Tampil di Atas Menu Navigasi -->
+            <div class="mb-4 shrink-0 p-3 rounded-2xl bg-surface-container-low border border-outline/10 flex items-center justify-between">
+                <span class="text-sm font-semibold text-on-surface-variant flex items-center gap-2 pl-1">
+                    <span class="material-symbols-outlined text-[20px] text-primary">palette</span>
+                    Mode Tampilan
+                </span>
+                <div class="inline-flex p-1 bg-surface-container-high rounded-full items-center border border-outline/10">
+                    <button id="mobile-theme-btn-dark" onclick="setTheme('dark')" class="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-on-surface transition-all">
+                        <span class="material-symbols-outlined text-[15px]">dark_mode</span>
+                        <span>Dark</span>
+                    </button>
+                    <button id="mobile-theme-btn-light" onclick="setTheme('light')" class="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-on-surface-variant hover:text-on-surface transition-all">
+                        <span class="material-symbols-outlined text-[15px]">light_mode</span>
+                        <span>Light</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Options: Tipografi Tebal Elegan Gaya IQAir dengan Chevron Kanan -->
+            <div class="space-y-4 pb-8 overflow-y-auto">
+                <button id="mobile-nav-btn-discover" onclick="showTool('discover'); toggleMobile(false)" class="tool-btn w-full flex items-center gap-3.5 px-3.5 py-3 rounded-2xl text-[17px] font-bold text-primary bg-primary/10 hover:bg-primary/20 transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-[22px] shrink-0">today</span>
+                    <span class="truncate">Discover Apps</span>
+                    <span class="material-symbols-outlined text-primary/70 text-[20px] ml-auto shrink-0">chevron_right</span>
+                </button>
+
+                <!-- Section: Essentials -->
+                <div>
+                    <div class="text-xs font-bold text-outline uppercase tracking-wider mb-1.5 px-2">Essentials</div>
+                    <div class="space-y-1">
+                        <button onclick="showTool('calculator'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-blue-400 text-[20px] shrink-0">calculate</span><span class="truncate">Calculator</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('converter-unit'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-amber-400 text-[20px] shrink-0">sync_alt</span><span class="truncate">Unit Converter</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('timer'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-rose-400 text-[20px] shrink-0">hourglass_top</span><span class="truncate">Timer</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('stopwatch'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0">timer</span><span class="truncate">Stopwatch</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                    </div>
+                </div>
+
+                <!-- Section: Media & Audio -->
+                <div>
+                    <div class="text-xs font-bold text-outline uppercase tracking-wider mb-1.5 px-2">Media & Images</div>
+                    <div class="space-y-1">
+                        <button onclick="showTool('converter'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-purple-400 text-[20px] shrink-0">image</span><span class="truncate">Image Converter</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('resizer'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-sky-400 text-[20px] shrink-0">photo_size_select_large</span><span class="truncate">Image Resizer</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('color-picker'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-pink-400 text-[20px] shrink-0">colorize</span><span class="truncate">Color Picker</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('media-extract'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-violet-400 text-[20px] shrink-0">music_note</span><span class="truncate">Video to Audio</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('img2pdf'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-red-400 text-[20px] shrink-0">picture_as_pdf</span><span class="truncate">Image to PDF</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                    </div>
+                </div>
+
+                <!-- Section: Dev & Fun -->
+                <div>
+                    <div class="text-xs font-bold text-outline uppercase tracking-wider mb-1.5 px-2">Dev & Fun</div>
+                    <div class="space-y-1">
+                        <button onclick="showTool('text'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-cyan-400 text-[20px] shrink-0">data_object</span><span class="truncate">Text & JSON</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('html-editor'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-teal-400 text-[20px] shrink-0">code</span><span class="truncate">HTML Editor</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('diff'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">difference</span><span class="truncate">Diff Checker</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('qr'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-neutral-400 text-[20px] shrink-0">qr_code_2</span><span class="truncate">QR Generator</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('password'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-amber-500 text-[20px] shrink-0">password</span><span class="truncate">Password Gen</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('typing'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-blue-500 text-[20px] shrink-0">keyboard</span><span class="truncate">Typing Test</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                    </div>
+                </div>
+
+                <!-- Section: Code & Obfuscator -->
+                <div>
+                    <div class="text-xs font-bold text-outline uppercase tracking-wider mb-1.5 px-2">Code & Obfuscator</div>
+                    <div class="space-y-1">
+                        <button onclick="showTool('packer'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">lock</span><span class="truncate">JS Packer</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                        <button onclick="showTool('unpacker'); toggleMobile(false)" class="w-full flex items-center gap-3.5 px-3.5 py-3 text-[17px] font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition"><span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0">lock_open</span><span class="truncate">JS unPacker</span><span class="material-symbols-outlined text-outline/40 text-[20px] ml-auto shrink-0">chevron_right</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SEARCH MODAL (UNIVERSAL MOBILE & RAIL) ==================== -->
+    <div id="mobile-search-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex flex-col p-4 transition-opacity duration-200" onclick="toggleMobileSearch(false)">
+        <div class="w-full max-w-lg mx-auto bg-surface-container rounded-3xl p-4 shadow-2xl border border-outline/10 flex flex-col gap-3 mt-12" onclick="event.stopPropagation()">
+            <div class="flex items-center gap-2 border-b border-outline/10 pb-3">
+                <span class="material-symbols-outlined text-primary text-[22px]">search</span>
+                <input 
+                    id="mobile-search-input" 
+                    type="search" 
+                    placeholder="Cari alat SuperTools..." 
+                    oninput="handleMobileSearch(this.value)"
+                    class="flex-1 bg-transparent text-sm text-on-surface placeholder:text-outline focus:outline-none"
+                />
+                <button onclick="toggleMobileSearch(false)" class="p-1 rounded-full text-outline hover:text-on-surface transition" aria-label="Tutup Pencarian">
+                    <span class="material-symbols-outlined text-[20px]">close</span>
+                </button>
+            </div>
+            <div id="mobile-search-results" class="max-h-72 overflow-y-auto space-y-1 py-1">
+                <!-- Hasil pencarian dinamis mobile -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Sidebar Floating Tooltip (Gemini Style) -->
+    <div id="sidebar-floating-tooltip" class="fixed hidden z-50 pointer-events-none px-2.5 py-1 text-xs font-medium rounded-lg shadow-xl bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 transition-opacity duration-150 whitespace-nowrap"></div>
+
+    <!-- Floating Toasts -->
+    <div id="packer-toast" class="fixed bottom-6 right-6 opacity-0 pointer-events-none transition-all duration-300 z-50"></div>
+    <div id="unpacker-toast" class="fixed bottom-6 right-6 opacity-0 pointer-events-none transition-all duration-300 z-50"></div>
+
+    <!-- Modular Scripts (100% Client-Side Pure Vanilla JS - On-Demand Lazy Loaded) -->
+    <script defer src="js/app.js?v=20260919_2335"></script>
+    <script defer src="js/youtube-noads.js?v=20260919_2335"></script>
+</body>
+</html>
