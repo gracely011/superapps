@@ -1,0 +1,6 @@
+.tmp*
+.last_deploy_commit
+.build_hashes.json
+backup/
+*.zip
+*.bak
