@@ -1,6 +1,6 @@
 // SuperTools High-Performance Service Worker (Cache-First / Stale-While-Revalidate)
 // Menjamin durasi cache instan & efisien tanpa ketergantungan origin header server
-const CACHE_NAME = 'supertools-v20260921_2326';
+const CACHE_NAME = 'supertools-v20260921_2327';
 const STATIC_ASSETS = [
     './',
     './index.html',
